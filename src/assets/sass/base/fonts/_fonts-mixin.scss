@@ -1,0 +1,10 @@
+@import './fonts';
+
+
+@mixin h1_PC {
+  font-size: $h1Fs_PC;
+  font-weight: $h1Fw_PC;
+  letter-spacing: $h1Ls;
+  line-height: $h1Lh_PC;
+  font-family: $font-family;
+}

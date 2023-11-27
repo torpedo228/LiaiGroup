@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* ⭐字體 font-family⭐ */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap");
+/* ⭐base⭐ */
+/* ⭐使用說明⭐ */
+.sassUsageExample {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  .sassUsageExample {
+    height: 60%;
+    margin: auto;
+  }
+}
+@media (min-width: 576px) {
+  .sassUsageExample {
+    height: 70%;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .sassUsageExample {
+    height: 70%;
+    margin: auto;
+  }
+}
+@media (min-width: 992px) {
+  .sassUsageExample {
+    height: 70%;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .sassUsageExample {
+    height: 80%;
+    margin: 0 2% 0 5%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", "Noto Serif TC" "Font Awesome 6 Free";
+}
+
+img {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}/*# sourceMappingURL=style.css.map */
