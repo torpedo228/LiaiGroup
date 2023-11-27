@@ -18,6 +18,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
   ],
+  base: "/LiaiGroup/", //github pages
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
