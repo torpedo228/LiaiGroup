@@ -18,27 +18,27 @@ const router = createRouter({
     {
       path: '/imogami',
       name: 'Imogami',
-      component: () => import('@/views/Imogami/ImogamiHome.vue')
+      component: () => import('@/views/pages/Imogami/ImogamiHome.vue')
     },
     {
       path: '/kotanukiPark',
       name: 'KotanukiPark',
-      component: () => import('@/views/KotanukiPark/KotanukiParkHome.vue')
+      component: () => import('@/views/pages/KotanukiPark/KotanukiParkHome.vue')
     },
     {
       path: '/tanukattHotel',
       name: 'TanukattHotel',
-      component: () => import('@/views/TanukattHotel/TanukattHotelHome.vue')
+      component: () => import('@/views/pages/TanukattHotel/TanukattHotelHome.vue')
     },
     {
       path: '/raccoonDogAssociation',
       name: 'RaccoonDogAssociation',
-      component: () => import('@/views/RaccoonDogAssociation/RaccoonDogAssociationHome.vue')
+      component: () => import('@/views/pages/RaccoonDogAssociation/RaccoonDogAssociationHome.vue')
     },
     {
       path: '/tanukiStage',
       name: 'TanukiStage',
-      component: () => import('@/views/TanukiStage/TanukiStageHome.vue')
+      component: () => import('@/views/pages/TanukiStage/TanukiStageHome.vue')
     }
   ]
 })
