@@ -87,24 +87,3 @@
     @content;
   }
 }
-
-
-/* ⭐使用說明⭐ */
-.sassUsageExample {
-
-  @include custom-responsive("xs") {
-    height: 60%; // logo圖片大小調整
-    margin: auto;
-  }
-
-  @include custom-responsive("sm md lg") {
-    height: 70%; // logo圖片大小調整
-    margin: auto;
-  }
-
-  @include custom-responsive("xl xxl") {
-    height: 80%; // logo圖片大小調整
-    margin: 0 2% 0 5%;
-  }
-
-}

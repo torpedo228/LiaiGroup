@@ -1,20 +1,9 @@
-//---------------------------------------------------------------------------------------
-/* ⭐字體 font-family⭐ */
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
-
-$font-family:'Noto Sans TC','Noto Serif TC''Font Awesome 6 Free';
-
-//---------------------------------------------------------------------------------------
-/* ⭐base⭐ */
-
 @import 'base/color';
-@import 'base/fonts/fonts-mixin';
+@import 'base/fonts';
 @import 'base/border-radius';
 // @import 'base/box-shadow';
 @import 'base/flex';
-@import 'base/rwd/_breakpoints';
+@import 'base/breakpoints';
 @import 'base/body-space';
 @import 'base/effects/effects';
 
@@ -22,9 +11,19 @@ $font-family:'Noto Sans TC','Noto Serif TC''Font Awesome 6 Free';
 * {
   margin: 0;
   padding: 0;
-  font-family: $font-family;
 }
 
+a{
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:active {
+  background-color: none;
+} 
 
 img {
   user-drag: none;
@@ -34,3 +33,17 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+h1{
+  @include h1_PC();
+}
+
+h2{
+  @include h2_PC();
+}
+
+
+h3{
+  @include h3_PC();
+}
+
