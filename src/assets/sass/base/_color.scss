@@ -2,6 +2,11 @@
 $liaiGroupPrimary:#540B0E;
 $liaiGroupSecondary:#FFF3B0;
 
+@mixin liaiGroupGradient(){
+background: rgb(123,79,54);
+background: linear-gradient(90deg, rgba(123,79,54,1) 0%, rgba(0,0,0,1) 100%);
+}
+
 // 芋神 Imogami
 $imogamiPrimary:#FFE11B;
 $imogamiSecondary:#81097D;
@@ -19,8 +24,12 @@ $tanukattHotelGrey:#D9D9D9;
 // 狸貓保育協會 Raccoon Dog Association
 $rdaPrimary:#3A5A40;
 $rdaSecondary:#A3B18A;
-$rdaGradient:linear-gradient(90deg, rgba(58,90,64,1) 35%, rgba(163,177,138,1) 100%);
 $rdaDecoration:#E07A5F;
+
+@mixin rdaGradient(){
+  background: rgb(58,90,64);
+  background: linear-gradient(90deg, rgba(58,90,64,1) 35%, rgba(163,177,138,1) 100%);
+  }
 
 // 狸劇團 Tanuki Stage
 $tanukiStagePrimary:#C1121F;

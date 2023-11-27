@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+$regularFont:'Noto Sans TC','Font Awesome 6 Free';
+$liaiGroupFont:'Noto Serif TC';
+
+//h1-h6_PC
+$h1fs_PC: 40px;
+$h2fs_PC: 32px;
+$h3fs_PC: 28px;
+$h4fs_PC: 20px;
+$h5fs_PC: 18px;
+$h6fs_PC: 16px;
+
+//h1-h6_MB
+// $h1fs_MB: 2.1875rem;
+// $h2fs_MB: 1.75rem;
+// $h3fs_MB: 1.53125rem;
+// $h4fs_MB: 1.3125rem;
+// $h5fs_MB: 1.09375rem;
+// $h6fs_MB: 0.875rem;
+
+//button_PC
+$btnfs_PC:20px;
+
+//button_MB
+$btnfs_MB:17.5px;
+
+// font weight
+$fwRegular: 400;
+$fWBold: 700;
+
+
+
+@mixin h1_PC {
+  font-size: $h1fs_PC;
+  font-weight: $fWBold;
+}
+
+@mixin h2_PC {
+  font-size: $h2fs_PC;
+  font-weight: $fWBold;
+}
+
+@mixin h3_PC {
+  font-size: $h3fs_PC;
+  font-weight: $fWBold;
+}
+
