@@ -1,29 +1,30 @@
 @import 'base/color';
 @import 'base/fonts';
 @import 'base/border-radius';
-// @import 'base/box-shadow';
+@import 'base/box-shadow';
 @import 'base/flex';
 @import 'base/breakpoints';
 @import 'base/body-space';
-@import 'base/effects/effects';
+@import 'base/effects';
 
 
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
-a{
+@mixin a_href() {
   text-decoration: none;
-}
 
-a:visited {
-  text-decoration: none;
-}
+  &:visited {
+    text-decoration: none;
+  }
 
-a:active {
-  background-color: none;
-} 
+  &:active {
+    background-color: none;
+  }
+}
 
 img {
   user-drag: none;
@@ -34,16 +35,31 @@ img {
   -ms-user-select: none;
 }
 
-h1{
+h1 {
   @include h1_PC();
 }
 
-h2{
+h2 {
   @include h2_PC();
 }
 
-
-h3{
+h3 {
   @include h3_PC();
 }
 
+h4 {
+  @include h4_PC();
+}
+
+p {
+  @include p_PC();
+}
+
+a {
+  @include a_href();
+}
+
+.liai_group_font {
+  font-family: $liaiGroupFont;
+
+}

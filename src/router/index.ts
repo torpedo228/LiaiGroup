@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'liaiGroupHome',
+      name: 'liai Group',
       component: LiaiGroupHome
     },
     {
@@ -17,27 +17,27 @@ const router = createRouter({
     ,
     {
       path: '/imogami',
-      name: 'Imogami',
+      name: 'Imogami Home',
       component: () => import('@/views/pages/Imogami/ImogamiHome.vue')
     },
     {
-      path: '/kotanukiPark',
-      name: 'KotanukiPark',
+      path: '/kotanuki-park',
+      name: 'Kotanuki Park',
       component: () => import('@/views/pages/KotanukiPark/KotanukiParkHome.vue')
     },
     {
-      path: '/tanukattHotel',
-      name: 'TanukattHotel',
+      path: '/tanukatt-hotel',
+      name: 'Tanukatt Hotel',
       component: () => import('@/views/pages/TanukattHotel/TanukattHotelHome.vue')
     },
     {
-      path: '/raccoonDogAssociation',
-      name: 'RaccoonDogAssociation',
+      path: '/raccoon-dog-association',
+      name: 'Raccoon Dog Association',
       component: () => import('@/views/pages/RaccoonDogAssociation/RaccoonDogAssociationHome.vue')
     },
     {
-      path: '/tanukiStage',
-      name: 'TanukiStage',
+      path: '/tanuki-stage',
+      name: 'Tanuki Stage',
       component: () => import('@/views/pages/TanukiStage/TanukiStageHome.vue')
     }
   ]
