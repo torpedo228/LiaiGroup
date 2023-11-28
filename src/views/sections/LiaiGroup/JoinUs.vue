@@ -7,12 +7,12 @@ import PortalButton from '@/components/global/PortalButton.vue';
     <div class="bg_image_wrap"></div>
     <div class="content_wrap">
       <div class="title_block">
-        <h2 class="title">人才招募</h2>
+        <h2 class="liai_group_font">人才招募</h2>
         <div class="under_deco"></div>
       </div>
       <p class="title">竭誠歡迎懷抱夢想與熱情的人才加入，在狸愛這個世界舞台上，創造價值、實現夢想</p>
       <div class="btn_block">
-        <PortalButton content="了解更多" type="learn_more" routingLink="/" />
+        <PortalButton content="了解更多" type="learn_more" routingLink="/join-us" />
       </div>
     </div>
   </div>
@@ -50,11 +50,5 @@ div.title_block {
     height: 2.5vh;
     background-color: $liaiGroupPrimary;
   }
-}
-
-
-
-.title {
-  font-family: $liaiGroupFont;
 }
 </style>

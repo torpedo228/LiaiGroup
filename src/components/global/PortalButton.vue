@@ -18,7 +18,7 @@ enum TYPE {
 
 <template>
   <div class="btn_container" :class="TYPE[props.type as keyof typeof TYPE]"
-    @click="router.push({ path: props.routingLink })">
+    @click="router.push({ path: props.routingLink as string })">
 
     <p>{{ props.content }}</p>
 

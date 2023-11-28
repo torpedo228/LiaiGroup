@@ -42,12 +42,12 @@ const brandList = [
 <template>
   <div class="brand_container">
     <div class="title_block">
-      <h2 class="title">狸愛品牌</h2>
+      <h2 class="liai_group_font">狸愛品牌</h2>
       <div class="under_deco"></div>
     </div>
     <div class="brand_wrap">
       <BrandBlock v-for="brand in brandList" :key="brand.title_CH" :title_CH="brand.title_CH" :title_EN="brand.title_EN"
-        :description="brand.description" :imgSrc="brand.imgSrc" />
+        :description="brand.description" :imgSrc="brand.imgSrc" :routingLink="brand.routingLink" />
     </div>
 
   </div>
@@ -71,17 +71,10 @@ div.title_block {
   }
 }
 
-
-
 div.brand_wrap {
   margin-top: 5vh;
   padding: 1vw;
   @include flex_hm();
   gap: 1vw;
-
-}
-
-.title {
-  font-family: $liaiGroupFont;
 }
 </style>
