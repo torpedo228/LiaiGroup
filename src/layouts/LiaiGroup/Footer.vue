@@ -25,7 +25,7 @@ const socialMediaList = [
 </script>
 
 <template>
-  <div class="footer_container">
+  <footer class="footer_container">
     <div class="left_section">
       <div class="logo_wrap">
         <div class="img_block">
@@ -33,6 +33,7 @@ const socialMediaList = [
         </div>
         <div class="name_block liai_group_font">
           <h1>狸愛集團</h1>
+          <h2>LIAI</h2>
         </div>
       </div>
       <div class="info_wrap">
@@ -53,11 +54,11 @@ const socialMediaList = [
     </div>
 
 
-  </div>
+  </footer>
 </template>
 
 <style scoped lang="scss">
-div.footer_container {
+footer.footer_container {
   padding: 1vh 5vw;
   width: 100%;
   height: 60vh;
