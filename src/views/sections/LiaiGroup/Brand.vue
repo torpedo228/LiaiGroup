@@ -63,13 +63,15 @@ div.brand_container {
 
 div.title_block {
   @include flex_vm();
+
+  div.under_deco {
+    width: 9vw;
+    height: 2.5vh;
+    background-color: $liaiGroupPrimary;
+  }
 }
 
-div.under_deco {
-  width: 9vw;
-  height: 2.5vh;
-  background-color: $liaiGroupPrimary;
-}
+
 
 div.brand_wrap {
   margin-top: 5vh;

@@ -10,7 +10,8 @@ const props = defineProps({
 })
 
 enum TYPE {
-  brand_block = "brand_block_btn_color"
+  brand_block = "brand_block_btn_color",
+  learn_more = "learn_more_btn_color"
 }
 
 </script>
@@ -35,7 +36,6 @@ div.btn_container {
   border-radius: $regularBtnBr;
   margin: 2vw 1vw 0.5vw;
   @include flex_hm();
-  @include btnEffect($liaiGroupPrimary, $white);
 }
 
 p {
@@ -58,5 +58,15 @@ i {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $liaiGroupPrimary;
+
+  @include btnEffect($liaiGroupPrimary, $white, $liaiGroupPrimary);
+}
+
+.learn_more_btn_color {
+  background-color: $white;
+  color: $liaiGroupPrimary;
+  border: 1px solid $white;
+
+  @include btnEffect($white, $liaiGroupPrimary, $white);
 }
 </style>
