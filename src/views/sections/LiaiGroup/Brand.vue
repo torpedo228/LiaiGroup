@@ -6,21 +6,21 @@ const brandList = [
     title_CH: '芋神',
     title_EN: 'Imogami',
     description: '嚴選地瓜',
-    imgSrc: '/src/assets/images/LiaiGroup/brand/Imogami.jpg',
+    imgSrc: '@/assets/images/LiaiGroup/brand/Imogami.jpg',
     routingLink: '/imogami'
   },
   {
     title_CH: '國營狸子記念公園',
     title_EN: 'Kotanuki Park',
     description: '旅憩首選',
-    imgSrc: '/src/assets/images/LiaiGroup/brand/KotanukiPark.jpg',
+    imgSrc: '@/assets/images/LiaiGroup/brand/KotanukiPark.jpg',
     routingLink: '/kotanuki-park'
   },
   {
     title_CH: '狸悅酒店',
     title_EN: 'Tanukatt Hotel',
     description: '至上服務',
-    imgSrc: '/src/assets/images/LiaiGroup/brand/TanukattHotel.jpg',
+    imgSrc: '/assets/images/LiaiGroup/brand/TanukattHotel.jpg',
     routingLink: '/tanukatt-hotel'
   },
   {

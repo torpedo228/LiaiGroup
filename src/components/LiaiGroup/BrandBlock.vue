@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import { getImageUrl } from '@/utils/image-url'
 import PortalButton from '@/components/global/PortalButton.vue';
 
 const props = defineProps({
@@ -9,12 +10,13 @@ const props = defineProps({
   imgSrc: String,
   routingLink: String
 })
+
 </script>
 
 <template>
   <div class="brand_block_container">
     <div class="img_container">
-      <img class="brand" :src="props.imgSrc" alt="LiaiGroup logo">
+      <img class="brand" :src="getImageUrl(props.imgSrc as string)" alt="LiaiGroup logo">
     </div>
     <div class="text_container">
       <h4>{{ props.title_CH }}</h4>
@@ -54,8 +56,8 @@ div.img_container {
     object-position: 55% 80%;
   }
 }
+
 div.text_container {
   text-align: center;
 }
-
 </style>
