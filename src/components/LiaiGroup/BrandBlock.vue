@@ -16,7 +16,7 @@ const props = defineProps({
 <template>
   <div class="brand_block_container">
     <div class="img_container">
-      <img class="brand" :src="getImageUrl(props.imgSrc as string)" alt="LiaiGroup logo">
+      <img class="brand" :src="getImageUrl(props.imgSrc as string)" alt="Liai Group brand">
     </div>
     <div class="text_container">
       <h4>{{ props.title_CH }}</h4>
