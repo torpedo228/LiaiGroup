@@ -5,12 +5,13 @@ $regularFont:'Noto Sans TC','Font Awesome 6 Free';
 $liaiGroupFont:'Noto Serif TC';
 
 //h1-h6_PC
-$h1fs_PC: 40px;
-$h2fs_PC: 32px;
-$h3fs_PC: 28px;
-$h4fs_PC: 20px;
+$h1fs_PC: 3vw;
+$h2fs_PC: 2vw;
+$h3fs_PC: 1.6vw;
+$h4fs_PC: 1.2vw;
 $h5fs_PC: 18px;
 $h6fs_PC: 16px;
+$pfs_PC: 1vw;
 
 //h1-h6_MB
 // $h1fs_MB: 2.1875rem;
@@ -47,3 +48,12 @@ $fWBold: 700;
   font-weight: $fWBold;
 }
 
+@mixin h4_PC {
+  font-size: $h4fs_PC;
+  font-weight: $fWBold;
+}
+
+@mixin p_PC {
+  font-size: $pfs_PC;
+  font-weight: $fwRegular;
+}

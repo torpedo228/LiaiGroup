@@ -1,6 +1,4 @@
-<script setup>
-// import { ref } from 'vue';
-
+<script setup lang="ts">
 const navList = [
   {
     title: '關於狸愛',
@@ -32,7 +30,7 @@ const navList = [
   <div class="hero_container">
     <div class="left_section">
       <nav class="nav">
-        <li v-for="section in navList">
+        <li v-for="section in navList" :key="section.title">
           <RouterLink :to="section.route" class="">{{ section.title }}</RouterLink>
         </li>
       </nav>
@@ -41,7 +39,6 @@ const navList = [
       </div>
       <div class="text_container">
         <h1>狸愛集團</h1>
-        <br>
         <h2>回歸本心 回歸大自然</h2>
         <h3>狸愛集團 幸福所在</h3>
       </div>
@@ -57,7 +54,6 @@ const navList = [
 div.hero_container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   display: flex;
 }
 
@@ -76,6 +72,7 @@ div.left_section {
       list-style: none;
 
       a {
+        font-size: 1vw;
         color: white;
       }
 
@@ -90,9 +87,10 @@ div.left_section {
   }
 
   div.img_container {
-    margin: 1vw;
+    margin: 2vw;
 
     img.liai_group_logo {
+      width: 20vw;
       display: block;
       margin: auto;
     }
@@ -102,6 +100,11 @@ div.left_section {
     font-family: $liaiGroupFont;
     color: $white;
     text-align: center;
+
+    h1{
+      display: block;
+      margin-bottom: 2vh;
+    }
   }
 
 }

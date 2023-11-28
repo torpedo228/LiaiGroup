@@ -1,7 +1,7 @@
 @import 'base/color';
 @import 'base/fonts';
 @import 'base/border-radius';
-// @import 'base/box-shadow';
+@import 'base/box-shadow';
 @import 'base/flex';
 @import 'base/breakpoints';
 @import 'base/body-space';
@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 a{
@@ -42,8 +43,16 @@ h2{
   @include h2_PC();
 }
 
-
 h3{
   @include h3_PC();
 }
+
+h4{
+  @include h4_PC();
+}
+
+p{
+  @include p_PC();
+}
+
 
