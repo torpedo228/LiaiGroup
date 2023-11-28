@@ -6,35 +6,35 @@ const brandList = [
     title_CH: '芋神',
     title_EN: 'Imogami',
     description: '嚴選地瓜',
-    imgSrc: '@/assets/images/LiaiGroup/brand/Imogami.jpg',
+    imgSrc: 'LiaiGroup/brand/Imogami.jpg',
     routingLink: '/imogami'
   },
   {
     title_CH: '國營狸子記念公園',
     title_EN: 'Kotanuki Park',
     description: '旅憩首選',
-    imgSrc: '@/assets/images/LiaiGroup/brand/KotanukiPark.jpg',
+    imgSrc: 'LiaiGroup/brand/KotanukiPark.jpg',
     routingLink: '/kotanuki-park'
   },
   {
     title_CH: '狸悅酒店',
     title_EN: 'Tanukatt Hotel',
-    description: '至上服務',
-    imgSrc: '/assets/images/LiaiGroup/brand/TanukattHotel.jpg',
+    description: '尊榮服務',
+    imgSrc: 'LiaiGroup/brand/TanukattHotel.jpg',
     routingLink: '/tanukatt-hotel'
   },
   {
     title_CH: '狸貓保育協會',
     title_EN: 'Raccoon Dog Association',
     description: '自然愛護',
-    imgSrc: '/src/assets/images/LiaiGroup/brand/RaccoonDogAssociation.jpg',
+    imgSrc: 'LiaiGroup/brand/RaccoonDogAssociation.jpg',
     routingLink: '/raccoon-dog-association'
   },
   {
     title_CH: '狸劇團',
     title_EN: 'Tanuki Stage',
     description: '精湛演出',
-    imgSrc: '/src/assets/images/LiaiGroup/brand/TanukiStage.jpg',
+    imgSrc: 'LiaiGroup/brand/TanukiStage.jpg',
     routingLink: '/tanuki-stage'
   }]
 </script>
