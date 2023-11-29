@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import NavList from '@/components/LiaiGroup/NavList.vue';
+
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router';
-const router = useRouter();
 
 onMounted(() => {
   window.addEventListener("scroll", whenScroll);
@@ -24,13 +23,17 @@ function whenScroll() {
   }
 }
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 
 </script>
 
 <template>
   <header class="header_container animate__animated" :class="show ? 'animate__fadeInDown' : 'animate__fadeOutUp'"
     v-show="showUnlock">
-    <div class="logo_wrap" @click="router.push({ path: '/' as string })">
+    <div class="logo_wrap" @click=scrollToTop>
       <div class="img_block">
         <img class="liai_group_logo" src="@/assets/images/LiaiGroup/liai_group_logo.svg" alt="LiaiGroup logo">
       </div>
@@ -38,7 +41,10 @@ function whenScroll() {
         <p>狸愛集團 LIAI</p>
       </div>
     </div>
-    <NavList />
+    <div class="nav_list">
+      <NavList />
+    </div>
+
   </header>
 </template>
 
@@ -65,13 +71,50 @@ div.logo_wrap {
   gap: 1vw;
 
   img.liai_group_logo {
-    width: 4vw;
+
     display: block;
     margin: auto;
+
+    @include custom-responsive("xs sm") {
+      width: 20vw;
+    }
+
+
+    @include custom-responsive("xl xxl") {
+      width: 4vw;
+    }
   }
 
   div.name_block p {
-    font-size: 1.8vw;
+
+    @include custom-responsive("xs sm") {
+      font-size: 6vw;
+    }
+
+
+    @include custom-responsive("xl xxl") {
+      font-size: 1.8vw;
+    }
+  }
+}
+
+div.nav_list {
+  @include custom-responsive("xs sm") {
+    display: none;
+  }
+
+  @include custom-responsive("xl xxl") {
+    display: block;
+  }
+}
+
+div.side_menu {
+  @include custom-responsive("xs sm") {
+    display: block;
+  }
+
+  @include custom-responsive("xl xxl") {
+    display: none;
   }
 }
 </style>

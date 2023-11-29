@@ -10,7 +10,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
         <h2 class="liai_group_font">人才招募</h2>
         <div class="under_deco"></div>
       </div>
-      <p class="title">竭誠歡迎懷抱夢想與熱情的人才加入，在狸愛這個世界舞台上，創造價值、實現夢想</p>
+      <p class="content">竭誠歡迎懷抱夢想與熱情的人才加入，在狸愛這個世界舞台上，創造價值、實現夢想</p>
       <div class="btn_block">
         <PortalButton content="了解更多" type="learn_more" routingLink="/join-us" />
       </div>
@@ -46,9 +46,34 @@ div.title_block {
   @include flex_vm();
 
   div.under_deco {
-    width: 9vw;
-    height: 2.5vh;
+    @include custom-responsive("xs sm") {
+      width: 45vw;
+      height: 2.5vh;
+    }
+
+
+    @include custom-responsive("xl xxl") {
+      width: 9vw;
+      height: 2.5vh;
+    }
+
+    border-radius: $br_PC;
+    ;
     background-color: $liaiGroupPrimary;
+  }
+}
+
+p.content {
+  text-align: center;
+  @include custom-responsive("xs sm") {
+    width: 80%;
+    font-size: 6vw;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    width: 100%;
+    font-size: 1.2vw;
   }
 }
 </style>

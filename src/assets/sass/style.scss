@@ -36,23 +36,48 @@ img {
 }
 
 h1 {
-  @include h1_PC();
+  @include h1();
 }
 
 h2 {
-  @include h2_PC();
+  @include h2();
 }
 
 h3 {
-  @include h3_PC();
+  @include h3();
 }
 
 h4 {
-  @include h4_PC();
+  @include h4();
 }
 
 p {
-  @include p_PC();
+  @include p();
+}
+
+label {
+  @include p();
+}
+
+input {
+  @include p();
+
+  @include custom-responsive("xs sm") {
+    width: 50vw;
+    height: 4vh;
+    margin-left: 3vw;
+    padding: 1vw 3vw;
+  
+  }
+
+  @include custom-responsive("xl xxl") {
+    width: 12vw;
+    height: 3vh;
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+  
+  }
+
 }
 
 a {
@@ -61,5 +86,4 @@ a {
 
 .liai_group_font {
   font-family: $liaiGroupFont;
-
 }

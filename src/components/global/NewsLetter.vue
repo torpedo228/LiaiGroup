@@ -11,21 +11,13 @@
 <style scoped lang="scss">
 div.container {
   position: relative;
-}
-
-label {
-  font-size: 1vw;
+  @include flex_hm();
 }
 
 input {
-  font-size: 1vw;
-  margin-left: 1vw;
-  padding: 0.5vw 1vw;
-  width: 12vw;
-  height: 3vh;
   border: 1px solid $liaiGroupPrimary;
   border-radius: $regularBtnBr;
-  background-color:$white;
+  background-color: $white;
 
   &:focus {
     transition: 0.2s;
@@ -35,12 +27,19 @@ input {
 }
 
 i.send {
-  font-size: 1vw;
   position: absolute;
-  top: 1.4vh;
-  left: 18vw;
+  top: 25%;
   color: $liaiGroupPrimary;
-
   @include sendEffect();
+
+  @include custom-responsive("xs sm") {
+    right: 5vw;
+    font-size: 6vw;
+  }
+
+  @include custom-responsive("xl xxl") {
+    right: 1vw;
+    font-size: 1.2vw;
+  }
 }
 </style>

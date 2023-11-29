@@ -1,3 +1,14 @@
+@keyframes slide {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(30%)
+  }
+}
+
+
 @mixin btnEffect($backgroundColor, $textColor, $borderColor) {
   cursor: pointer;
 
@@ -7,6 +18,11 @@
     color: $textColor;
     border: 1px solid $borderColor;
     transition: 0.1s;
+
+    i {
+      animation-name: slide;
+      animation-duration: 0.5s;
+    }
   }
 
   &:active {
@@ -53,3 +69,5 @@
     opacity: 0.8;
   }
 }
+
+

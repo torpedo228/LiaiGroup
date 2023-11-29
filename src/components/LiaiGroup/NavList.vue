@@ -38,16 +38,53 @@ const navList = [
 
 <style scoped lang="scss">
 nav {
+  // border: 1px solid red;
   color: $white;
-  display: flex;
+  @include flex_hm();
+
+
+  @include custom-responsive("xs sm") {
+    width: 100vw;
+    flex-wrap: wrap;
+    gap: 3vw;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    flex-wrap: nowrap;
+    width: 35vw;
+    gap: 0;
+  }
 
   li {
-    padding-right: 1.6vw;
+    text-align: center;
+    width: 30%;
     list-style: none;
 
+    @include custom-responsive("xs sm") {
+      padding: 3vw;
+      @include liaiGroupGradient();
+      border-radius: $br_PC;
+    }
+
+
+    @include custom-responsive("xl xxl") {
+      padding: 0;
+      background: none;
+    }
+
+
     a {
-      font-size: 1vw;
       color: white;
+
+      @include custom-responsive("xs sm") {
+        font-size: 5vw;
+      }
+
+
+      @include custom-responsive("xl xxl") {
+        font-size: 1vw;
+      }
     }
 
     a:hover {

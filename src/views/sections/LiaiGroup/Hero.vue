@@ -31,18 +31,48 @@ div.hero_container {
 }
 
 div.left_section {
-  width: 40%;
-  height: 100vh;
-  @include liaiGroupGradient();
-  @include flex_vm();
+  @include custom-responsive("xs sm") {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    position: static;
+    transform: translate(0, 0);
+    width: 40%;
+    height: 100vh;
+    @include liaiGroupGradient();
+    @include flex_vm();
+  }
+
 
   div.img_block {
-    margin: 2vw;
+
+    @include custom-responsive("xs sm") {
+      margin: 8vh 0 1vh;
+    }
+
+
+    @include custom-responsive("xl xxl") {
+      margin: 3vw 0 1vw;
+    }
 
     img.liai_group_logo {
-      width: 20vw;
+
       display: block;
       margin: auto;
+
+      @include custom-responsive("xs sm") {
+        width: 70vw;
+      }
+
+
+      @include custom-responsive("xl xxl") {
+        width: 16vw;
+      }
     }
   }
 
@@ -59,10 +89,25 @@ div.left_section {
 }
 
 div.right_section {
-  width: 60%;
+  @include custom-responsive("xs sm") {
+    width: 100%;
+  }
+
+  @include custom-responsive("xl xxl") {
+    width: 60%;
+  }
 
   img.hero_pic {
     height: 100vh;
+
+    @include custom-responsive("xs sm") {
+      width: 100vw;
+      object-fit: cover;
+      // object-position:-30vw;
+    }
+
+
+    @include custom-responsive("xl xxl") {}
   }
 }
 </style>

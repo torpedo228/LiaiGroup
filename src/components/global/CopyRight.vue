@@ -7,9 +7,11 @@ const props = defineProps({
 </script>
 
 <template>
-  <div>
-    <p>Copyright &copy; {{ new Date().getFullYear() }} {{ props.content }}</p>
-  </div>
+  <p class="copyright">Copyright &copy; {{ new Date().getFullYear() }} {{ props.content }}</p>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+p.copyright {
+  padding: 5vw;
+}
+</style>
