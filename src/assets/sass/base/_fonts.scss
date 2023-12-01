@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
 
-$regularFont:'Noto Sans TC','Font Awesome 6 Free';
-$liaiGroupFont:'Noto Serif TC';
+$regularFont:'Noto Sans TC',
+'Font Awesome 6 Free';
+$liaiGroupFont:'Yuji Mai';
 
 //h1-h6_PC
 $h1fs_PC: 3vw;
@@ -14,12 +16,13 @@ $h6fs_PC: 16px;
 $pfs_PC: 1vw;
 
 //h1-h6_MB
-// $h1fs_MB: 2.1875rem;
-// $h2fs_MB: 1.75rem;
-// $h3fs_MB: 1.53125rem;
-// $h4fs_MB: 1.3125rem;
-// $h5fs_MB: 1.09375rem;
-// $h6fs_MB: 0.875rem;
+$h1fs_MB: 15vw;
+$h2fs_MB: 10vw;
+$h3fs_MB: 8vw;
+$h4fs_MB: 8vw;
+$h5fs_MB: 3vw;
+$h6fs_MB: 3vw;
+$pfs_MB: 5vw;
 
 //button_PC
 $btnfs_PC:20px;
@@ -29,31 +32,67 @@ $btnfs_MB:17.5px;
 
 // font weight
 $fwRegular: 400;
-$fWBold: 700;
+$fwBold: 700;
 
 
 
-@mixin h1_PC {
-  font-size: $h1fs_PC;
-  font-weight: $fWBold;
+@mixin h1 {
+  @include custom-responsive("xs sm") {
+    font-size: $h1fs_MB;
+    font-weight: $fwRegular;
+  }
+
+  @include custom-responsive("xl xxl") {
+    font-size: $h1fs_PC;
+    font-weight: $fwRegular;
+  }
 }
 
-@mixin h2_PC {
-  font-size: $h2fs_PC;
-  font-weight: $fWBold;
+
+@mixin h2 {
+  @include custom-responsive("xs sm") {
+    font-size: $h2fs_MB;
+    font-weight: $fwRegular;
+  }
+
+  @include custom-responsive("xl xxl") {
+    font-size: $h2fs_PC;
+    font-weight: $fwRegular;
+  }
 }
 
-@mixin h3_PC {
-  font-size: $h3fs_PC;
-  font-weight: $fWBold;
+@mixin h3 {
+  @include custom-responsive("xs sm") {
+    font-size: $h3fs_MB;
+    font-weight: $fwRegular;
+  }
+
+  @include custom-responsive("xl xxl") {
+    font-size: $h3fs_PC;
+    font-weight: $fwRegular;
+  }
 }
 
-@mixin h4_PC {
-  font-size: $h4fs_PC;
-  font-weight: $fWBold;
+@mixin h4 {
+  @include custom-responsive("xs sm") {
+    font-size: $h4fs_MB;
+    font-weight: $fwRegular;
+  }
+
+  @include custom-responsive("xl xxl") {
+    font-size: $h4fs_PC;
+    font-weight: $fwRegular;
+  }
 }
 
-@mixin p_PC {
-  font-size: $pfs_PC;
-  font-weight: $fwRegular;
+@mixin p {
+  @include custom-responsive("xs sm") {
+    font-size: $pfs_MB;
+    font-weight: $fwRegular;
+  }
+
+  @include custom-responsive("xl xxl") {
+    font-size: $pfs_PC;
+    font-weight: $fwRegular;
+  }
 }

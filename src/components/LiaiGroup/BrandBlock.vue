@@ -18,7 +18,7 @@ const props = defineProps({
     <div class="img_container">
       <img class="brand" :src="getImageUrl(props.imgSrc as string)" alt="Liai Group brand">
     </div>
-    <div class="text_container">
+    <div class="text_container ">
       <h4>{{ props.title_CH }}</h4>
       <h4>{{ props.title_EN }}</h4>
       <br>
@@ -26,15 +26,27 @@ const props = defineProps({
       </p>
     </div>
     <div class="btn_container">
-      <PortalButton content="前往官網" type="brand_block" :routingLink="props.routingLink" />
+      <PortalButton content="前往官網" type="liai_brand_block" :routingLink="props.routingLink" />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 div.brand_block_container {
-  width: 16vw;
-  height: 55vh;
+
+  @include custom-responsive("xs sm") {
+    width: 100%;
+    height: 55vh;
+
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    width: 16vw;
+    height: 55vh;
+
+  }
+
   border-radius: $br_PC;
   display: flex;
   flex-direction: column;
@@ -59,5 +71,9 @@ div.img_container {
 
 div.text_container {
   text-align: center;
+
+  h4 {
+    font-weight: bold;
+  }
 }
 </style>

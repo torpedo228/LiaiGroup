@@ -10,8 +10,9 @@ const props = defineProps({
 })
 
 enum TYPE {
-  brand_block = "brand_block_btn_color",
-  learn_more = "learn_more_btn_color"
+  liai_brand_block = "liai_brand_block_btn_color",
+  liai_learn_more = "liai_learn_more_btn_color",
+  imogami_about = "imogami_about_btn_color"
 }
 
 </script>
@@ -21,40 +22,64 @@ enum TYPE {
     @click="router.push({ path: props.routingLink as string })">
 
     <p>{{ props.content }}</p>
-
-    <div class="icon_block">
-      <i class="fa-solid fa-circle-arrow-right"></i>
-    </div>
-
+    <i class="fa-solid fa-circle-arrow-right"></i>
   </div>
 </template>
 
 <style scoped lang="scss">
 div.btn_container {
-  width: 10vw;
-  height: 6vh;
   border-radius: $regularBtnBr;
   margin: 2vw 1vw 0.5vw;
   @include flex_hm();
+
+  @include custom-responsive("xs sm") {
+    width: 50vw;
+    height: 6vh;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    width: 10vw;
+    height: 6vh;
+  }
+
 }
 
 p {
-  margin: 0 1vw;
+
+  @include custom-responsive("xs sm") {
+    margin: 0 4vw 0 10vw;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    margin: 0 1vw;
+  }
 }
 
+
 i {
-  font-size: 1.5vw;
   display: block;
-  width: 2vw;
-  height: 2vw;
-  position: relative;
-  transform: translateY(5%);
   @include flex_hm();
+
+  @include custom-responsive("xs sm") {
+    width: 12vw;
+    height: 12vw;
+    font-size: 8vw;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    width: 2vw;
+    height: 2vw;
+    font-size: 1.5vw
+  }
+
 }
 
 
 // Liai Group
-.brand_block_btn_color {
+.liai_brand_block_btn_color {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $liaiGroupPrimary;
@@ -62,11 +87,19 @@ i {
   @include btnEffect($liaiGroupPrimary, $white, $liaiGroupPrimary);
 }
 
-.learn_more_btn_color {
+.liai_learn_more_btn_color {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $white;
 
   @include btnEffect($white, $liaiGroupPrimary, $white);
+}
+
+.imogami_about_btn_color {
+  background-color: $imogamiSecondary;
+  color: $imogamiPrimary;
+  border: 1px solid $imogamiSecondary;
+
+  @include btnEffect($imogamiPrimary, $imogamiSecondary, $imogamiPrimary);
 }
 </style>

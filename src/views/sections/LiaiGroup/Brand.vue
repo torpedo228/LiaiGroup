@@ -56,17 +56,36 @@ const brandList = [
 <style scoped lang="scss">
 div.brand_container {
   width: 100vw;
-  height: 100vh;
+  padding: 5vh 0;
   @include flex_vm();
+
+  @include custom-responsive("xs sm") {
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    height: 100vh;
+  }
 
 }
 
 div.title_block {
+  
   @include flex_vm();
 
   div.under_deco {
-    width: 9vw;
-    height: 2.5vh;
+    @include custom-responsive("xs sm") {
+      width: 45vw;
+      height: 2.5vh;
+    }
+
+
+    @include custom-responsive("xl xxl") {
+      width: 9vw;
+      height: 2.5vh;
+    }
+
+    border-radius: $br_PC;
     background-color: $liaiGroupPrimary;
   }
 }
@@ -75,6 +94,18 @@ div.brand_wrap {
   margin-top: 5vh;
   padding: 1vw;
   @include flex_hm();
-  gap: 1vw;
+
+
+  @include custom-responsive("xs sm") {
+    width: 80vw;
+    flex-wrap: wrap;
+    gap: 3vh;
+  }
+
+
+  @include custom-responsive("xl xxl") {
+    flex-wrap: nowrap;
+    gap: 1vw;
+  }
 }
 </style>

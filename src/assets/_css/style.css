@@ -1,20 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap");
+@keyframes slide {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(30%);
+  }
+}
 * {
   margin: 0;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:active {
-  background-color: none;
 }
 
 img {
@@ -27,16 +24,210 @@ img {
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: 700;
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  h1 {
+    font-size: 15vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 15vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3vw;
+    font-weight: 400;
+  }
 }
 
 h2 {
-  font-size: 32px;
-  font-weight: 700;
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  h2 {
+    font-size: 10vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  h2 {
+    font-size: 10vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2vw;
+    font-weight: 400;
+  }
 }
 
 h3 {
-  font-size: 28px;
-  font-weight: 700;
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  h3 {
+    font-size: 8vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  h3 {
+    font-size: 8vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.6vw;
+    font-weight: 400;
+  }
+}
+
+h4 {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  h4 {
+    font-size: 8vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  h4 {
+    font-size: 8vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.2vw;
+    font-weight: 400;
+  }
+}
+
+p {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  p {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  p {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  p {
+    font-size: 1vw;
+    font-weight: 400;
+  }
+}
+
+label {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  label {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  label {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  label {
+    font-size: 1vw;
+    font-weight: 400;
+  }
+}
+
+input {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+@media (min-width: 0px) {
+  input {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 576px) {
+  input {
+    font-size: 5vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1200px) {
+  input {
+    font-size: 1vw;
+    font-weight: 400;
+  }
+}
+@media (min-width: 0px) {
+  input {
+    width: 50vw;
+    height: 4vh;
+    margin-left: 3vw;
+    padding: 1vw 3vw;
+  }
+}
+@media (min-width: 576px) {
+  input {
+    width: 50vw;
+    height: 4vh;
+    margin-left: 3vw;
+    padding: 1vw 3vw;
+  }
+}
+@media (min-width: 1200px) {
+  input {
+    width: 12vw;
+    height: 3vh;
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active {
+  background-color: none;
+}
+
+.liai_group_font {
+  font-family: "Yuji Mai";
 }/*# sourceMappingURL=style.css.map */

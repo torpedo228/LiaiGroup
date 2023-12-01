@@ -3,18 +3,18 @@ import LiaiGroupHome from '@/views/pages/LiaiGroup/LiaiGroupHome.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      el: to.hash || "#app",
+      behavior: "smooth",
+    };
+  },
   routes: [
     {
       path: '/',
       name: 'liai Group',
       component: LiaiGroupHome
     },
-    {
-      path: '/tanuki',
-      name: 'tanuki',
-      component: () => import('@/views/Tanuki.vue')
-    }
-    ,
     {
       path: '/imogami',
       name: 'Imogami Home',

@@ -1,15 +1,15 @@
 <script setup lang="ts">
+import Header from '@/layouts//LiaiGroup/Header.vue';
 import Hero from '@/views/sections/LiaiGroup/Hero.vue';
 import Brand from '@/views/sections/LiaiGroup/Brand.vue';
 import JoinUs from '@/views/sections/LiaiGroup/JoinUs.vue';
-import Header from '@/layouts//LiaiGroup/Header.vue';
 import Footer from '@/layouts//LiaiGroup/Footer.vue';
 
 </script>
 
 <template>
-  <div class="section_container">
-    <Header/>
+  <div class="liai_group_section_container">
+    <Header />
     <Hero />
     <Brand />
     <JoinUs />
@@ -18,7 +18,7 @@ import Footer from '@/layouts//LiaiGroup/Footer.vue';
 </template>
 
 <style scoped lang="scss">
-div.section_container {
+div.liai_group_section_container {
   width: 100%;
   overflow: hidden;
 }

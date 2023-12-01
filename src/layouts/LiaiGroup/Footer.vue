@@ -4,6 +4,10 @@ import SocialMedia from '@/components/global/SocialMedia.vue';
 import CopyRight from '@/components/global/CopyRight.vue';
 import NewsLetter from '@/components/global/NewsLetter.vue';
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 const socialMediaList = [
   {
     label: "facebook",
@@ -26,14 +30,14 @@ const socialMediaList = [
 
 <template>
   <footer class="footer_container">
+
     <div class="left_section">
-      <div class="logo_wrap">
+      <div class="logo_wrap" @click=scrollToTop>
         <div class="img_block">
           <img class="liai_group_logo" src="@/assets/images/LiaiGroup/liai_group_logo.svg" alt="LiaiGroup logo">
         </div>
         <div class="name_block liai_group_font">
-          <h1>狸愛集團</h1>
-          <h2>LIAI</h2>
+          <h1>狸愛集團 LIAI</h1>
         </div>
       </div>
       <div class="info_wrap">
@@ -44,29 +48,47 @@ const socialMediaList = [
         <SocialMedia v-for="socialMedia in socialMediaList" :key="socialMedia.label" :label="socialMedia.label"
           :url="socialMedia.url" />
       </div>
-
-      <CopyRight :content="'狸愛股份有限公司著作權所有'" />
     </div>
+
     <div class="vl"></div>
+
     <div class="right_section">
-      <NavList />
+      <div class="nav_list">
+        <NavList />
+      </div>
+    </div>
+
+    <div class="news_letter">
       <NewsLetter />
     </div>
 
+    <div class="copyright">
+      <CopyRight :content="'狸愛股份有限公司著作權所有'" />
+    </div>
 
   </footer>
 </template>
 
 <style scoped lang="scss">
 footer.footer_container {
-  padding: 1vh 5vw;
+  position: relative;
   width: 100%;
   height: 60vh;
   background-color: $liaiGroupPrimary;
   display: flex;
-  align-items: center;
   gap: 8vw;
   color: $white;
+
+  @include custom-responsive("xs sm") {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @include custom-responsive("xl xxl") {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1vh 5vw;
+  }
 }
 
 div.left_section {
@@ -74,41 +96,128 @@ div.left_section {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2vw;
+
+  @include custom-responsive("xs sm") {
+    gap: 3vw;
+  }
+
+  @include custom-responsive("xl xxl") {
+    gap: 1vw;
+  }
 
   div.logo_wrap {
-    @include flex_hm();
-    gap: 2vw;
+    cursor: pointer;
+
+    @include custom-responsive("xs sm") {
+      @include flex_vm();
+      margin: 5vh auto 1vh;
+    }
+
+    @include custom-responsive("xl xxl") {
+      @include flex_hm();
+      margin: 0;
+    }
 
     img.liai_group_logo {
-      width: 15vw;
       display: block;
       margin: auto;
 
+      @include custom-responsive("xs sm") {
+        width: 40vw;
+      }
+
+      @include custom-responsive("xl xxl") {
+        width: 15vw;
+      }
+    }
+  }
+
+  div.name_block h1 {
+    @include custom-responsive("xs sm") {
+      font-size: 8vw;
+    }
+
+    @include custom-responsive("xl xxl") {
+      font-size: 2.5vw;
     }
   }
 
   div.info_wrap p {
-    font-size: 1.2vw;
+    @include custom-responsive("xs sm") {
+      font-size: 6vw;
+    }
+
+    @include custom-responsive("xl xxl") {
+      font-size: 1.2vw;
+    }
   }
 
   div.social_media_wrap {
     @include flex_hm();
-    gap: 1vw;
+
+    @include custom-responsive("xs sm") {
+      gap: 3vw;
+    }
+
+    @include custom-responsive("xl xxl") {
+      gap: 1vw;
+    }
   }
 }
 
 div.right_section {
-  margin-top: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 30vh;
+  @include custom-responsive("xs sm") {
+    display: none;
+  }
+
+  @include custom-responsive("xl xxl") {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: 10vh;
+    gap: 30vh;
+  }
 }
 
-
 .vl {
-  border-left: 0.1vw solid $white;
-  height: 40vh;
+  @include custom-responsive("xs sm") {
+    display: none;
+  }
+
+  @include custom-responsive("xl xxl") {
+    display: block;
+    border-left: 0.1vw solid $white;
+    height: 40vh;
+  }
+}
+
+div.news_letter {
+  position: absolute;
+  
+  @include custom-responsive("xs sm") {
+    bottom: 20%;
+    margin: auto;
+  }
+
+  @include custom-responsive("xl xxl") {
+    bottom: 30%;
+    right: 40%;
+  }
+}
+
+div.copyright {
+
+  position: absolute;
+  left: 0;
+
+  @include custom-responsive("xs sm") {
+    bottom: 0;
+    width: 70%;
+  }
+
+  @include custom-responsive("xl xxl") {
+    bottom: -8vh;
+    width: 100%;
+  }
 }
 </style>
