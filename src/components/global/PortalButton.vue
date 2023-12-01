@@ -10,8 +10,9 @@ const props = defineProps({
 })
 
 enum TYPE {
-  brand_block = "brand_block_btn_color",
-  learn_more = "learn_more_btn_color"
+  liai_brand_block = "liai_brand_block_btn_color",
+  liai_learn_more = "liai_learn_more_btn_color",
+  imogami_about = "imogami_about_btn_color"
 }
 
 </script>
@@ -78,7 +79,7 @@ i {
 
 
 // Liai Group
-.brand_block_btn_color {
+.liai_brand_block_btn_color {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $liaiGroupPrimary;
@@ -86,11 +87,19 @@ i {
   @include btnEffect($liaiGroupPrimary, $white, $liaiGroupPrimary);
 }
 
-.learn_more_btn_color {
+.liai_learn_more_btn_color {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $white;
 
   @include btnEffect($white, $liaiGroupPrimary, $white);
+}
+
+.imogami_about_btn_color {
+  background-color: $imogamiSecondary;
+  color: $imogamiPrimary;
+  border: 1px solid $imogamiSecondary;
+
+  @include btnEffect($imogamiPrimary, $imogamiSecondary, $imogamiPrimary);
 }
 </style>

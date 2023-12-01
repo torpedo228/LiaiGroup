@@ -26,7 +26,7 @@ const props = defineProps({
       </p>
     </div>
     <div class="btn_container">
-      <PortalButton content="前往官網" type="brand_block" :routingLink="props.routingLink" />
+      <PortalButton content="前往官網" type="liai_brand_block" :routingLink="props.routingLink" />
     </div>
   </div>
 </template>
