@@ -33,5 +33,6 @@ img.left_img {
   height: 30vh;
   object-fit: cover;
   z-index: 100;
+  border-radius: $br_PC 0 0 $br_PC;
 }
 </style>

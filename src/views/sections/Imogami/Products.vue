@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Title from '@/components/Imogami/Title.vue';
 import PortalButton from '@/components/global/PortalButton.vue';
+
 import { getImageUrl } from '@/utils/image-url'
 
 const productList = [
@@ -9,49 +10,49 @@ const productList = [
     title_EN: "Sweet Potato",
     weight: "120g",
     price: "50",
-    imgSrc: "Imogami/products/sweet_potato.jpg",
+    imgSrc: "Imogami/products/sweet_potato.png",
   },
   {
     title_CH: "低鹽地瓜薯條",
     title_EN: "Low-Sodium Fries",
     weight: "300g",
     price: "200",
-    imgSrc: "Imogami/products/low_sodium_fries.jpg",
+    imgSrc: "Imogami/products/low_sodium_fries.png",
   },
   {
     title_CH: "幸福地瓜",
     title_EN: "Sweet Potato",
     weight: "120g",
     price: "50",
-    imgSrc: "Imogami/products/sweet_potato.jpg",
+    imgSrc: "Imogami/products/sweet_potato.png",
   },
   {
     title_CH: "低鹽地瓜薯條",
     title_EN: "Low-Sodium Fries",
     weight: "300g",
     price: "200",
-    imgSrc: "Imogami/products/low_sodium_fries.jpg",
+    imgSrc: "Imogami/products/low_sodium_fries.png",
   },
   {
     title_CH: "幸福地瓜",
     title_EN: "Sweet Potato",
     weight: "120g",
     price: "50",
-    imgSrc: "Imogami/products/sweet_potato.jpg",
+    imgSrc: "Imogami/products/sweet_potato.png",
   },
   {
     title_CH: "低鹽地瓜薯條",
     title_EN: "Low-Sodium Fries",
     weight: "300g",
     price: "200",
-    imgSrc: "Imogami/products/low_sodium_fries.jpg",
+    imgSrc: "Imogami/products/low_sodium_fries.png",
   }
 ]
 
 </script>
 
 <template>
-  <div class="products_container">
+  <div class="products_container" id="products">
     <div class="title_wrap">
       <Title :title="'Products'" :color="'purple'" :imgSrc="'Imogami/title/products.svg'" :content="'感受自然之美，享受健康之味'" />
     </div>
@@ -59,7 +60,7 @@ const productList = [
     <div class="products_wrap">
       <div class="product" v-for="product in  productList " :key="product.title_CH">
         <div class="img_block">
-          <img :src="getImageUrl(product.imgSrc as string)" :alt="product.title_CH">
+          <img :src="getImageUrl(product.imgSrc as string)" :alt="product.title_CH" loading="lazy">
         </div>
         <div class="info">
           <h3 class="title_CH">{{ product.title_CH }}</h3>

@@ -11,6 +11,24 @@ import Footer from '@/layouts/KotanukiPark/Footer.vue';
   <div class="kotanukiPark_section_container">
     <Header />
     <Hero />
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <News />
     <SeasonalFlower />
     <Transport />
@@ -18,4 +36,8 @@ import Footer from '@/layouts/KotanukiPark/Footer.vue';
   </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+div.kotanukiPark_section_container {
+
+}
+</style>
