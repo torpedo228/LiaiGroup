@@ -33,6 +33,7 @@ div.about_container {
 img {
   width: 65vw;
   cursor: pointer;
+  filter: brightness(120%);
 }
 
 div.content_wrap {
