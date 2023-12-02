@@ -12,7 +12,7 @@ function reload() {
       <img class="liai_group_logo" src="@/assets/images/Imogami/logo/logo_header.svg" alt="Imogami logo">
     </div>
     <div class="nav_list">
-      <NavList />
+      <NavList :color="'purple'" :direction="'horizon'"/>
       <div class="icon_wrap">
         <i class="fa-solid fa-circle-user"></i>
         <i class="fa-solid fa-cart-shopping"></i>

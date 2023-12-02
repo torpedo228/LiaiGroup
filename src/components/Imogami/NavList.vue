@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const props = defineProps({
+  color: String,
+  direction: String
+})
+
 const navList = [
   {
     title: 'ABOUT',
@@ -20,9 +25,9 @@ const navList = [
 
 <template>
   <div>
-    <nav class="nav">
+    <nav class="nav" :class="props.direction">
       <li v-for="section in navList" :key="section.title">
-        <RouterLink :to="section.route">{{ section.title }}</RouterLink>
+        <RouterLink :to="section.route" :class="props.color">{{ section.title }}</RouterLink>
       </li>
     </nav>
   </div>
@@ -30,7 +35,7 @@ const navList = [
 
 <style scoped lang="scss">
 nav {
-  @include flex_hm();
+
 
   @include custom-responsive("xs sm") {
     flex-wrap: wrap;
@@ -61,7 +66,6 @@ nav {
 
 
     a {
-      color: $imogamiSecondary;
       font-weight: $fwBold;
 
       @include custom-responsive("xs sm") {
@@ -79,10 +83,23 @@ nav {
       &:active {
         color: $imogamiDecoration;
       }
-
     }
-
-
   }
+}
+
+.purple {
+  color: $imogamiSecondary;
+}
+
+.white {
+  color: $white;
+}
+
+.horizon {
+  @include flex_hm();
+}
+
+.vertical {
+  @include flex_vm();
 }
 </style>
