@@ -9,10 +9,10 @@ function reload() {
 <template>
   <div class="header_container">
     <div class="logo_wrap" @click=reload>
-      <img class="liai_group_logo" src="@/assets/images/Imogami/logo.svg" alt="Imogami logo">
+      <img class="liai_group_logo" src="@/assets/images/Imogami/logo/logo_header.svg" alt="Imogami logo">
     </div>
     <div class="nav_list">
-      <NavList />
+      <NavList :color="'purple'" :direction="'horizon'"/>
       <div class="icon_wrap">
         <i class="fa-solid fa-circle-user"></i>
         <i class="fa-solid fa-cart-shopping"></i>
@@ -22,29 +22,26 @@ function reload() {
 </template>
 
 <style scoped lang="scss">
-div.header_container {
+div.logo_wrap {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 999;
-}
-
-div.logo_wrap {
   margin: 2vh 3vw;
 
   img {
     cursor: pointer;
     width: 15vw;
+    filter: brightness(120%);
   }
 }
 
 div.nav_list {
-  position: relative;
-  top: -2vw;
+  z-index: 999;
+  position: fixed;
+  top: 5vh;
+  right: 0;
+
   margin-right: 5vw;
   @include flex_hm();
   justify-content: space-evenly;
@@ -52,6 +49,7 @@ div.nav_list {
   height: 7vh;
   border-radius: $br_PC;
   background-color: $imogamiPrimary;
+  box-shadow: 0.3vw 0.3vw 0 $imogamiSecondary;
 
   div.icon_wrap {
     @include flex_hm();
@@ -64,7 +62,7 @@ div.nav_list {
     color: $imogamiSecondary;
 
     &:hover {
-      color: $imogamiSlogan;
+      color: $imogamiMidPurple;
     }
 
     &:active {

@@ -8,7 +8,9 @@ import NavList from '@/components/LiaiGroup/NavList.vue';
     <div class="left_section">
       <NavList />
       <div class="img_block">
-        <img class="liai_group_logo" src="@/assets/images/LiaiGroup/liai_group_logo.svg" alt="LiaiGroup logo">
+        <a href="https://www.buymeacoffee.com/tanuki.jr">
+          <img class="liai_group_logo" src="@/assets/images/LiaiGroup/liai_group_logo.svg" alt="LiaiGroup logo">
+        </a>
       </div>
       <div class="text_container liai_group_font">
         <h1>狸愛集團</h1>
