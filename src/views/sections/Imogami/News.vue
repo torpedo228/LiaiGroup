@@ -22,7 +22,7 @@ const newsList = [
     date: "2023.11.23",
     tag: "地瓜趣聞",
     title: "芋神蜜地瓜薯條，成功引來小狸貓一族",
-    content: "芋神的蜜地瓜薯條竟然成功引來傳說中的小狸貓一族!?網友TOOTO表示...是真的!!...",
+    content: "芋神出品的蜜地瓜薯條竟然成功引來傳說中的小狸貓一族!?網友TOOTOA表示...是真的!!...",
     imgSrc: "Imogami/news/news_3.png"
   }
 ]

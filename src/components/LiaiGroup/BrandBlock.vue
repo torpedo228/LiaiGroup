@@ -36,14 +36,11 @@ div.brand_block_container {
   @include custom-responsive("xs sm") {
     width: 100%;
     height: 55vh;
-
   }
-
 
   @include custom-responsive("xl xxl") {
     width: 16vw;
     height: 55vh;
-
   }
 
   border-radius: $br_PC;
@@ -61,6 +58,7 @@ div.img_container {
   height: 50%;
 
   img {
+    border-radius: $br_PC $br_PC 0 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
