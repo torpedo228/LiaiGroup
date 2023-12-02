@@ -5,15 +5,18 @@ import { getImageUrl } from '@/utils/image-url'
 const props = defineProps({
   title: String,
   color: String,
-  imgSrc: String
+  imgSrc: String,
+  content: String
 })
 </script>
 
 <template>
   <div class="title_container">
     <img :src="getImageUrl(props.imgSrc as string)" alt="deco">
-    <h2 :class="props.color">{{ props.title }}</h2>
-
+    <div class="title">
+      <h2 :class="props.color">{{ props.title }}</h2>
+    </div>
+    <p>{{ props.content }}</p>
   </div>
 </template>
 
@@ -24,19 +27,33 @@ div.title_container {
   position: relative;
 }
 
-h2 {
-  font-size: 4vw;
-  font-weight: $fwBold;
-  font-style: italic;
+div.title {
+  position: relative;
+  width: 20vw;
+  text-align: end;
   z-index: 1;
+
+  h2 {
+    font-size: 4vw;
+    font-weight: $fwBold;
+    font-style: italic;
+
+  }
+}
+
+
+p {
+  font-size: 1.5vw;
+  color: $imogamiMidPurple;
+  text-align: end;
 }
 
 img {
   width: 6vw;
-  position: absolute;
-  bottom: 3vh;
-  right: 4vw;
-  z-index: -1;
+  position: relative;
+  top: 9vh;
+  left: 18vw;
+  z-index: 0;
 }
 
 

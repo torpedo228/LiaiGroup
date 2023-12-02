@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { getImageUrl } from '@/utils/image-url'
 import PortalButton from '@/components/global/PortalButton.vue';
 

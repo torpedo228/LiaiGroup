@@ -12,6 +12,7 @@ import Footer from '@/layouts/Imogami/Footer.vue';
     <Header />
     <Hero />
     <About />
+    <img class="left_img" src="@/assets/images/Imogami/about/left_img.jpg" alt="sweet_potato">
     <Products />
     <News />
     <Footer />
@@ -22,5 +23,15 @@ import Footer from '@/layouts/Imogami/Footer.vue';
 div.imogami_section_container {
   font-family: $regularFont;
   width: 100%;
+}
+
+img.left_img {
+  position: relative;
+  float: right;
+  transform: translateY(-50%);
+  width: 50vw;
+  height: 30vh;
+  object-fit: cover;
+  z-index: 100;
 }
 </style>

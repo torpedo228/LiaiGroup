@@ -5,10 +5,36 @@
   justify-content: center;
   align-items: center;
 }
+@mixin flex_vm_js() {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin flex_vm_as() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
 
 // 水平置中
 @mixin flex_hm() {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin flex_hm_js() {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+
+@mixin flex_hm_as() {
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }

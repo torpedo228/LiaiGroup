@@ -6,7 +6,7 @@
   <div class="hero_container">
     <div class="text_wrap">
       <p class="line_1">Fresh. Nutritious. Eco-friendly.<br>The Best Sweet Potato in Taiwan.</p>
-      <h2 class="line_2">Sweet Potato<br>&emsp;&emsp;&emsp;Sweet Life.</h2>
+      <h2 class="line_2">Sweet Potato<br>&emsp;&emsp;&emsp;Sweet Life</h2>
       <p class="line_3">好芋，好幸福。</p>
     </div>
     <div class="img_wrap">
@@ -46,7 +46,7 @@ div.text_wrap {
   }
 
   p.line_1 {
-    color: $imogamiSlogan;
+    color: $imogamiMidPurple;
     font-size: 1.5vw;
   }
 
@@ -92,7 +92,7 @@ div.scroll_down_wrap {
 
   p {
     color: $imogamiSecondary;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: $fwBold;
   }
 

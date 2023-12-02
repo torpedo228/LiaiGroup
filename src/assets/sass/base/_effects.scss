@@ -44,6 +44,19 @@
   }
 }
 
+@mixin addEffect() {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.1s;
+  }
+
+  &:active {
+    transform: scale(1.2)
+  }
+}
+
 
 
 @mixin ftEffect {

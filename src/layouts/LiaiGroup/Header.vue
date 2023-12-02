@@ -105,6 +105,7 @@ div.nav_list {
 
   @include custom-responsive("xl xxl") {
     display: block;
+    margin-right: 2vw;
   }
 }
 

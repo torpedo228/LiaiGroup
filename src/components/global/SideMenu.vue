@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import NavList from '@/components/LiaiGroup/NavList.vue';
 
-import { defineProps } from 'vue'
-
 const props = defineProps({
   type: String
 })

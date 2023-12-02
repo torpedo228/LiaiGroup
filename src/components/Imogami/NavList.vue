@@ -73,7 +73,7 @@ nav {
       }
 
       &:hover {
-        color: $imogamiSlogan;
+        color: $imogamiMidPurple;
       }
 
       &:active {
