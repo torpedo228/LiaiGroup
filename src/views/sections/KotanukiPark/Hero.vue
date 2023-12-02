@@ -3,9 +3,11 @@
 </script>
 
 <template>
-  <div></div>
+  <div>
+
+    <img src="@/assets/images/KotanukiPark/hero/hero_img.svg" alt="">
+
+  </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
