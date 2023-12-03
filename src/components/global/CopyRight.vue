@@ -9,7 +9,4 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
-p.copyright {
-  padding: 5vw;
-}
 </style>

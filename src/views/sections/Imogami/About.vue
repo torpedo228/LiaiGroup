@@ -19,11 +19,21 @@ import PortalButton from '@/components/global/PortalButton.vue';
         <PortalButton content="了解更多" type="imogami_more" routingLink="#" />
       </div>
     </div>
+    
+    <div class="scroll_down_wrap">
+      <p>芋此前行</p>
+      <RouterLink to="#products">
+        <div class="icon_wrap">
+          <i class="fa-solid fa-angles-down animate__animated animate__shakeY animate__infinite animate__slow"></i>
+        </div>
+      </RouterLink>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 div.about_container {
+  position: relative;
   overflow: hidden;
   display: flex;
   gap: 3vw;
@@ -34,6 +44,7 @@ img {
   width: 65vw;
   cursor: pointer;
   filter: brightness(120%);
+  border-radius: 0 $br_PC $br_PC 0;
 }
 
 div.content_wrap {
@@ -52,6 +63,36 @@ div.content_wrap {
   div.btn_block {
     position: relative;
     left: 10vw;
+  }
+}
+
+div.scroll_down_wrap {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 90vh;
+
+  @include flex_vm();
+
+  p {
+    color: $imogamiPrimary;
+    font-size: 1.5vw;
+    font-weight: $fwBold;
+  }
+
+  div.icon_wrap {
+    width: 3vw;
+    height: 3vw;
+    @include flex_hm();
+    border-radius: $circle;
+    border: 10px solid $imogamiPrimary;
+
+
+    i {
+      color: $imogamiPrimary;
+      font-size: 2vw;
+      animation-duration: 8s
+    }
   }
 }
 </style>

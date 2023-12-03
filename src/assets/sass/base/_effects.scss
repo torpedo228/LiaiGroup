@@ -31,6 +31,18 @@
   }
 }
 
+@mixin tagEffect() {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: translate(2px, 2px);
+  }
+}
+
 @mixin sendEffect() {
   cursor: pointer;
 
@@ -81,6 +93,19 @@
 
   &:active {
     opacity: 0.8;
+  }
+}
+
+@mixin goToEffect($color) {
+  cursor: pointer;
+
+  &:hover {
+    color: $color;
+  }
+
+  &:active {
+    color: $color;
+    opacity: 0.5;
   }
 }
 

@@ -26,6 +26,7 @@ input {
   }
 }
 
+
 i.send {
   position: absolute;
   top: 25%;
@@ -41,5 +42,27 @@ i.send {
     right: 1vw;
     font-size: 1.2vw;
   }
+}
+
+
+input {
+  @include p();
+
+  @include custom-responsive("xs sm") {
+    width: 50vw;
+    height: 4vh;
+    margin-left: 3vw;
+    padding: 1vw 3vw;
+  
+  }
+
+  @include custom-responsive("xl xxl") {
+    width: 12vw;
+    height: 3vh;
+    margin-left: 1vw;
+    padding: 0.5vw 1vw;
+  
+  }
+
 }
 </style>

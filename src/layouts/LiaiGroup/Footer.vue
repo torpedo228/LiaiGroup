@@ -193,7 +193,7 @@ div.right_section {
 
 div.news_letter {
   position: absolute;
-  
+
   @include custom-responsive("xs sm") {
     bottom: 20%;
     margin: auto;
@@ -206,18 +206,19 @@ div.news_letter {
 }
 
 div.copyright {
-
   position: absolute;
-  left: 0;
+
 
   @include custom-responsive("xs sm") {
     bottom: 0;
     width: 70%;
+    left: 0;
   }
 
   @include custom-responsive("xl xxl") {
-    bottom: -8vh;
     width: 100%;
+    bottom: 1vh;
+    left: 1vw;
   }
 }
 </style>

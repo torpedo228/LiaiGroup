@@ -14,6 +14,7 @@ enum TYPE {
   imogami_more = "imogami_more_btn_color",
   imogami_all_products = "imogami_all_products_btn_color",
   imogami_full_news = "imogami_full_news_btn_color",
+  kotanuki_park_all_news = "kotanuki_park_all_news_btn_color",
 }
 
 </script>
@@ -113,11 +114,17 @@ i {
   @include btnEffect($white, $imogamiSecondary, $white);
 }
 .imogami_full_news_btn_color {
-
   background-color: $white;
   color: $imogamiSecondary;
-  border: 1px imogamiSecondary $white;
+  border: 1px solid $white;
 
   @include btnEffect($imogamiSecondary, $white, $imogamiSecondary);
+}
+.kotanuki_park_all_news_btn_color {
+  background-color: $kotanukiParkSecondary;
+  color: $kotanukiParkPrimary;
+  border: 1px solid $kotanukiParkSecondary;
+
+  @include btnEffect($kotanukiParkSecondary, $kotanukiParkPrimary, $kotanukiParkSecondary);
 }
 </style>

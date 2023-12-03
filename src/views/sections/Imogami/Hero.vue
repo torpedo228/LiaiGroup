@@ -14,15 +14,15 @@
       <img class="hero_deco animate__animated animate__bounce animate__infinite animate__slow"
         src="@/assets/images/Imogami/hero/hero_deco.svg" alt="hero_img">
     </div>
-  </div>
 
-  <div class="scroll_down_wrap">
-    <p>芋此前行</p>
-    <RouterLink to="#about">
-      <div class="icon_wrap">
-        <i class="fa-solid fa-angles-down animate__animated animate__shakeY animate__infinite animate__slow"></i>
-      </div>
-    </RouterLink>
+    <div class="scroll_down_wrap">
+      <p>芋此前行</p>
+      <RouterLink to="#about">
+        <div class="icon_wrap">
+          <i class="fa-solid fa-angles-down animate__animated animate__shakeY animate__infinite animate__slow"></i>
+        </div>
+      </RouterLink>
+    </div>
   </div>
 </template>
 
@@ -31,6 +31,7 @@ div.hero_container {
   width: 100%;
   height: 100vh;
   @include flex_hm();
+  position: relative;
 }
 
 div.text_wrap {
@@ -86,7 +87,7 @@ div.scroll_down_wrap {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: -5%;
+  top: 90vh;
 
   @include flex_vm();
 

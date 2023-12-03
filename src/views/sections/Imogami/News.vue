@@ -78,23 +78,28 @@ div.title_wrap {
 div.news_wrap {
   @include flex_vm();
   gap: 5vh;
+
   div.news {
     width: 60vw;
     border-bottom: 3px solid white;
+ 
     @include flex_hm_as();
-    gap: 1vw;
+    gap: 2vw;
     padding-bottom: 1vh;
 
 
     div.img_wrap {
-      @include flex_hm();
-
+      display: flex;
+      align-items: end;
       width: 20vw;
-      height: 30vh;
+      height: 28vh;
+      border-radius: $br_PC;
+      overflow: hidden;
+      border: 0.6vw solid $white;
+      background-color: $imogamiSecondary;
 
       img {
         width: 100%;
-        border-radius: $br_PC;
         filter: brightness(120%);
 
       }
@@ -148,7 +153,7 @@ div.news_wrap {
   }
 }
 
-div.more_news{
+div.more_news {
   margin: 5vh;
 }
 </style>
