@@ -9,7 +9,7 @@ function reload() {
 <template>
   <div class="header_container">
     <div class="logo_wrap" @click=reload>
-      <img class="liai_group_logo" src="@/assets/images/Imogami/logo/logo_header.svg" alt="Imogami logo">
+      <img class="imogami_logo" src="@/assets/images/Imogami/logo/logo_header.svg" alt="Imogami logo">
     </div>
     <div class="nav_list">
       <NavList :color="'purple'" :direction="'horizon'"/>

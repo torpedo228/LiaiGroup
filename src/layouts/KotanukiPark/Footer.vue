@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import NavList from '@/components/Imogami/NavList.vue';
 import SocialMedia from '@/components/global/SocialMedia.vue';
 import CopyRight from '@/components/global/CopyRight.vue';
 import Statement from '@/components/global/Statement.vue';
@@ -34,7 +33,7 @@ const socialMediaList = [
     </div>
     <div class="info">
       <p>小狸記念公園管理中心</p>
-      <p>〒222-2222 狸愛都 狸愛市狸町 2222</p>
+      <p>〒222-2222 狸愛都 狸愛市 狸町 2222</p>
       <p>TEL 022-222-2222</p>
     </div>
     <div class="social_media_wrap">

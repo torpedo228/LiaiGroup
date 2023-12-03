@@ -10,7 +10,7 @@ const brandList = [
     routingLink: '/imogami'
   },
   {
-    title_CH: '國營狸子記念公園',
+    title_CH: '國營小狸記念公園',
     title_EN: 'Kotanuki Park',
     description: '旅憩首選',
     imgSrc: 'LiaiGroup/brand/KotanukiPark.jpg',
@@ -31,7 +31,7 @@ const brandList = [
     routingLink: '/raccoon-dog-association'
   },
   {
-    title_CH: '狸劇團',
+    title_CH: '狸戲團',
     title_EN: 'Tanuki Stage',
     description: '精湛演出',
     imgSrc: 'LiaiGroup/brand/TanukiStage.jpg',
