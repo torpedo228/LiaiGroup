@@ -2,7 +2,7 @@
 import Header from '@/layouts/KotanukiPark/Header.vue';
 import Hero from '@/views/sections/KotanukiPark/Hero.vue';
 import News from '@/views/sections/KotanukiPark/News.vue';
-import SeasonalFlower from '@/views/sections/KotanukiPark/SeasonalFlower.vue';
+import Seasonal from '@/views/sections/KotanukiPark/Seasonal.vue';
 import Transport from '@/views/sections/KotanukiPark/Transport.vue';
 import Footer from '@/layouts/KotanukiPark/Footer.vue';
 </script>
@@ -11,26 +11,8 @@ import Footer from '@/layouts/KotanukiPark/Footer.vue';
   <div class="kotanukiPark_section_container">
     <Header />
     <Hero />
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <News />
-    <SeasonalFlower />
+    <Seasonal />
     <Transport />
     <Footer />
   </div>
@@ -38,6 +20,6 @@ import Footer from '@/layouts/KotanukiPark/Footer.vue';
 
 <style scoped lang="scss">
 div.kotanukiPark_section_container {
-
+  font-family: $kotanukiFont;
 }
 </style>

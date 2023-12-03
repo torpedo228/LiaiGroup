@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="event">
-        <h4>「秋夜散歩」開催中</h4>
+        <h4>「冬夜散歩」開催中</h4>
         <p>時間：16:30~21:00</p>
         <p>地點：小狸花道、幸福走廊</p>
       </div>
@@ -29,7 +29,7 @@
 
 <style scoped lang="scss">
 div.hero_container {
-  font-family: $KotanukiFont;
+  font-family: $kotanukiFont;
   width: 100%;
   height: 100vh;
   overflow: hidden;

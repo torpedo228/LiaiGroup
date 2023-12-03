@@ -168,57 +168,6 @@ label {
   }
 }
 
-input {
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-}
-@media (min-width: 0px) {
-  input {
-    font-size: 5vw;
-    font-weight: 400;
-  }
-}
-@media (min-width: 576px) {
-  input {
-    font-size: 5vw;
-    font-weight: 400;
-  }
-}
-@media (min-width: 1200px) {
-  input {
-    font-size: 1vw;
-    font-weight: 400;
-  }
-}
-@media (min-width: 0px) {
-  input {
-    width: 50vw;
-    height: 4vh;
-    margin-left: 3vw;
-    padding: 1vw 3vw;
-  }
-}
-@media (min-width: 576px) {
-  input {
-    width: 50vw;
-    height: 4vh;
-    margin-left: 3vw;
-    padding: 1vw 3vw;
-  }
-}
-@media (min-width: 1200px) {
-  input {
-    width: 12vw;
-    height: 3vh;
-    margin-left: 1vw;
-    padding: 0.5vw 1vw;
-  }
-}
-
 a {
   text-decoration: none;
 }
