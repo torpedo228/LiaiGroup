@@ -17,12 +17,10 @@ const props = defineProps({
 
 <style scoped lang="scss">
 div.title_container {
-  border: 1px solid red;
   text-align: start;
   z-index: 10;
   width: 30vw;
   position: relative;
-
 }
 
 div.title {
@@ -47,7 +45,6 @@ div.hl {
   width: 10vw;
   height: 2vh;
 }
-
 
 .pink {
   background-color: $kotanukiParkSecondary;

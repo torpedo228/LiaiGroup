@@ -11,7 +11,7 @@
           <span>全園區</span><span>9:30~21:00</span>
         </div>
         <div class="span_wrap">
-          <span>小狸文化館</span><span>8:30~16:30</span>
+          <span>小狸文化館</span><span>10:30~16:30</span>
         </div>
       </div>
       <div class="event">

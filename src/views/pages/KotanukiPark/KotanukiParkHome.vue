@@ -8,7 +8,7 @@ import Footer from '@/layouts/KotanukiPark/Footer.vue';
 </script>
 
 <template>
-  <div class="kotanukiPark_section_container">
+  <div class="kotanuki_park_section_container">
     <Header />
     <Hero />
     <News />
@@ -19,7 +19,7 @@ import Footer from '@/layouts/KotanukiPark/Footer.vue';
 </template>
 
 <style scoped lang="scss">
-div.kotanukiPark_section_container {
+div.kotanuki_park_section_container {
   font-family: $kotanukiFont;
 }
 </style>

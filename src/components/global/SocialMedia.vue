@@ -14,11 +14,10 @@ const props = defineProps({
 
 <style scoped lang="scss">
 div.socia_media_container {
-
   background-color: $white;
   border-radius: $circle;
   @include flex_hm();
-  @include btnEffect(0, 0, 0);
+  @include imgEffect();
 
   @include custom-responsive("xs sm") {
     width: 12vw;
