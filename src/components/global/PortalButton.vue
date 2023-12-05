@@ -16,6 +16,7 @@ enum TYPE {
   imogami_full_news = "imogami_full_news_btn_color",
   kotanuki_park_all_news = "kotanuki_park_all_news_btn_color",
   tanuki_stage_order = "tanuki_stage_order_btn_color",
+  tanuki_stage_learn_more = "tanuki_stage_learn_more_btn_color",
 }
 
 </script>
@@ -134,5 +135,13 @@ i {
   border: 1px solid $tanukiStagePrimary;
 
   @include btnEffect($white, $tanukiStagePrimary, $white);
+}
+.tanuki_stage_learn_more_btn_color {
+  background-color: none;
+  color: $white;
+  border: 1px solid $white;
+
+  @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
+
 }
 </style>

@@ -103,7 +103,7 @@ nav {
       }
 
       @include custom-responsive("xl xxl") {
-        font-size: 1.5vw;
+        font-size: 1.3vw;
       }
 
       &:hover {

@@ -14,7 +14,6 @@ const props = defineProps({
 
 <style scoped lang="scss">
 div.socia_media_container {
-
   background-color: $white;
   border-radius: $circle;
   @include flex_hm();

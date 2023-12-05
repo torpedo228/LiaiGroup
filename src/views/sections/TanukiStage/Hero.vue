@@ -14,7 +14,8 @@ import PortalButton from '@/components/global/PortalButton.vue';
 
 <style scoped lang="scss">
 div.hero_container {
-  font-family: $regularFont ;
+  z-index: 10;
+  font-family: $regularFont;
   width: 80%;
   margin-left: auto;
   height: 100vh;

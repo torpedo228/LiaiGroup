@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import SocialMedia from '@/components/global/SocialMedia.vue';
 import CopyRight from '@/components/global/CopyRight.vue';
-import Statement from '@/components/global/Statement.vue';
-
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -29,7 +27,7 @@ const socialMediaList = [
   <footer class="footer_container">
 
     <div class="logo_wrap" @click=scrollToTop>
-      <img class="imogami_logo" src="@/assets/images/KotanukiPark/logo/logo.svg" alt="Imogami logo">
+      <img class="KotanukiPark_logo" src="@/assets/images/KotanukiPark/logo/logo.svg" alt="Imogami logo">
     </div>
     <div class="info">
       <p>小狸記念公園管理中心</p>
@@ -41,7 +39,7 @@ const socialMediaList = [
         :url="socialMedia.url" />
     </div>
     <div class="statement">
-      <Statement />
+      <a href="">隱私權政策聲明 </a> | <a href="">資訊安全政策</a> | <a href="">網站安全防護與回覆機制</a> | <a href="">網站著作權聲明</a>
     </div>
     <div class="copyright">
       <CopyRight :content="'KoTanuki Park All Rights Reserved.'" />
@@ -83,6 +81,18 @@ div.statement {
   color: white;
   bottom: 1vh;
   left: 1vw;
+
+  a {
+    color: white;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
 }
 
 div.copyright {
