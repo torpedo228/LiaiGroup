@@ -12,10 +12,10 @@ const navList = [
   {
     title: '設施介紹',
     icon: 'house-chimney-window',
-    route: '#news',
+    route: '#facilty',
   },
   {
-    title: '季節花卉',
+    title: '當季花卉',
     icon: 'leaf',
     route: '#seasonal',
   },
@@ -25,7 +25,7 @@ const navList = [
     route: '#event',
   },
   {
-    title: '交通規劃',
+    title: '交通資訊',
     icon: 'car',
     route: '#transport',
   }
