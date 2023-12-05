@@ -1,29 +1,42 @@
 <script setup lang="ts">
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import { getImageUrl } from '@/utils/assets-url'
+import 'vue3-carousel/dist/carousel.css'
+
+const heroList = [
+  'RaccoonDogAssociation/hero/hero_01.png',
+  'RaccoonDogAssociation/hero/hero_02.png',
+  'RaccoonDogAssociation/hero/hero_03.png',
+  'RaccoonDogAssociation/hero/hero_04.png',
+  'RaccoonDogAssociation/hero/hero_05.png',
+  'RaccoonDogAssociation/hero/hero_06.png',
+  'RaccoonDogAssociation/hero/hero_07.png'
+]
 
 </script>
 
 <template>
   <div class="hero_container">
-    <div class="today_info">
-      <div class="regular">
-        <h3>11月26日(日) 開園情報</h3>
-        <div class="span_wrap">
-          <span>全園區</span><span>9:30~21:00</span>
-        </div>
-        <div class="span_wrap">
-          <span>小狸文化館</span><span>10:30~16:30</span>
-        </div>
-      </div>
-      <div class="event">
-        <h4>「冬夜散歩」開催中</h4>
-        <p>時間：16:30~21:00</p>
-        <p>地點：小狸花道、幸福走廊</p>
-      </div>
-    </div>
-
     <a class="sponsor" href="https://www.buymeacoffee.com/tanuki.jr"></a>
-    <img src="@/assets/images/KotanukiPark/hero/hero_img.svg" alt="">
+    <Carousel :autoplay="3000" :wrap-around="true">
+      <Slide v-for="slide in heroList" :key="slide">
+        <div class="carousel__item"><img :src="getImageUrl(slide)" alt=""></div>
+      </Slide>
+      <template #addons>
+        <Navigation />
+        <Pagination />
+      </template>
+    </Carousel>
 
+
+    <div class="scroll_down_wrap">
+      <p>幫助狸貓</p>
+      <RouterLink to="#news">
+        <div class="icon_wrap">
+          <i class="fa-solid fa-handshake-angle animate__animated animate__shakeY animate__infinite"></i>
+        </div>
+      </RouterLink>
+    </div>
   </div>
 </template>
 
@@ -105,5 +118,42 @@ a.sponsor {
   right: 26vw;
   top: 65vh;
   z-index: 999;
+}
+
+
+.carousel__item {
+  height: 100vh;
+  width: 100%;
+}
+
+div.scroll_down_wrap {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 90vh;
+  @include flex_vm();
+  gap: 1vh;
+
+
+  p {
+    color: white;
+    font-size: 1.5vw;
+
+  }
+
+  div.icon_wrap {
+    width: 3vw;
+    height: 3vw;
+    @include flex_hm();
+    border-radius: $circle;
+    border: 0.5vw solid white;
+
+
+    i {
+      color: white;
+      font-size: 1.5vw;
+      animation-duration: 8s
+    }
+  }
 }
 </style>

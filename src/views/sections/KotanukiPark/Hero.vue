@@ -22,7 +22,7 @@
     </div>
 
     <a class="sponsor" href="https://www.buymeacoffee.com/tanuki.jr"></a>
-    <img src="@/assets/images/KotanukiPark/hero/hero_img.svg" alt="">
+    <img src="@/assets/images/KotanukiPark/hero/hero_img.png" alt="">
 
   </div>
 </template>

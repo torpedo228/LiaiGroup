@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import Title from '@/components/RaccoonDogAssociation/Title.vue';
 
 </script>
 
 <template>
-  <div></div>
+    <div class="actions_container" id="actions">
+      <div class="title_block">
+        <Title :title="'保育行動 Actions'" />
+      </div>
+    </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

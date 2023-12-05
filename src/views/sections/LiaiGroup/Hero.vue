@@ -19,7 +19,7 @@ import NavList from '@/components/LiaiGroup/NavList.vue';
       </div>
     </div>
     <div class="right_section">
-      <img class="hero_pic" src="@/assets/images/LiaiGroup/hero.jpg" alt="LiaiGroup hero photo">
+      <img class="hero_pic" src="@/assets/images/LiaiGroup/hero.png" alt="LiaiGroup hero photo">
     </div>
 
   </div>

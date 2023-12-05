@@ -20,6 +20,13 @@ const roleList = [
     imgSrc: "TanukiStage/group/star_turtle.png"
   },
   {
+    roleName: "禿頭海豹",
+    act: "二狸貓",
+    drama: "狸之起源",
+    intro: "遠古壁畫中小海豹戴上狸貓帽進化成小狸貓一族的傳說，一直是這個世界的謎團之一。主人公「闡釋者」決定追尋這個傳說的源頭，解開更多有關小海豹與小狸貓一族之間的秘密，精彩的冒險將在此揭開序幕。",
+    imgSrc: "TanukiStage/group/hage_seal.png"
+  },
+  {
     roleName: "師父",
     act: "小狸貓",
     drama: "狸之起源",
@@ -27,11 +34,11 @@ const roleList = [
     imgSrc: "TanukiStage/group/master.png"
   },
   {
-    roleName: "禿頭海豹",
+    roleName: "狸兔",
     act: "二狸貓",
-    drama: "狸之起源",
-    intro: "遠古壁畫中小海豹戴上狸貓帽進化成小狸貓一族的傳說，一直是這個世界的謎團之一。主人公「闡釋者」決定追尋這個傳說的源頭，解開更多有關小海豹與小狸貓一族之間的秘密，精彩的冒險將在此揭開序幕。",
-    imgSrc: "TanukiStage/group/hage_seal.png"
+    drama: "Dancing Beast",
+    intro: "小狸貓一族的狸兔身上有一種神奇的力量，每當牠跳舞時，周圍的一切都會變得幸福。狸兔的舞蹈不僅能夠治癒森林中的植物，還能讓其他小動物變得更加快樂。每當狸兔開始跳舞時，鳥兒會開始歌唱，花朵會綻放出五彩斑斓的顏色，整個森林彷彿沐浴在了一片溫馨的氛圍之中。然而，有一天，一場大風襲來，把森林中的樹木都吹得搖搖欲墜。狸兔決定......",
+    imgSrc: "TanukiStage/group/tanubit.png"
   }
 ]
 
@@ -79,8 +86,7 @@ function switchRole(i: any) {
       </div>
     </div>
 
-    <img data-aos="slide-left" class="deco" src="@/assets/images/TanukiStage/deco.svg"
-      alt="">
+    <img data-aos="slide-left" class="deco" src="@/assets/images/TanukiStage/deco.svg" alt="">
 
   </div>
 </template>
@@ -100,7 +106,6 @@ div.introduce {
   gap: 3vw;
 
   div.focus_wrap {
-
     position: relative;
     width: 20vw;
     height: 20vw;
@@ -131,6 +136,12 @@ div.introduce {
         @include flex_hm();
         overflow: hidden;
         cursor: pointer;
+
+
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.2s;
+        }
 
         img {
           width: 80%;
@@ -170,7 +181,7 @@ div.introduce {
         div {
           @include flex_hm();
           gap: 1vw;
-          width: 12vw;
+          width: 15vw;
           font-size: 1.2vw;
           padding: 0.5vw;
           color: white;

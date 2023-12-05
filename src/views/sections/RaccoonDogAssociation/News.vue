@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Title from '@/components/KotanukiPark/Title.vue';
+import Title from '@/components/RaccoonDogAssociation/Title.vue';
 import PortalButton from '@/components/global/PortalButton.vue';
 
 const newsList = [
@@ -21,26 +21,14 @@ const newsList = [
     label: "休園情報",
     title: "下周一 12/4 因設備整修 ，故休園一日。",
     url: "kotanuki-park/news/news_003",
-  },
-  {
-    date: "2023/11/28",
-    label: "公告",
-    title: "霸王菊花盛開!歡迎遊客前往觀賞。",
-    url: "kotanuki-park/news/news_004",
-  },
-  {
-    date: "2023/11/27",
-    label: "休園情報",
-    title: "本日因狸貓無故大量發生 ，故緊急休園一日。",
-    url: "kotanuki-park/news/news_004",
   }
 ]
 </script>
 
 <template>
-  <div class="news_container">
+  <div class="news_container" id="news">
     <div class="title_block">
-      <Title :title="'最新消息'" :color="'pink'" />
+      <Title :title="'最新消息 News'" />
     </div>
 
     <div class="news_wrap">

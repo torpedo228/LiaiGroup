@@ -19,6 +19,7 @@ import Footer from '@/layouts//LiaiGroup/Footer.vue';
 
 <style scoped lang="scss">
 div.liai_group_section_container {
+  font-family: $regularFont;
   width: 100%;
   overflow: hidden;
 }

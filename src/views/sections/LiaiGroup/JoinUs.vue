@@ -31,7 +31,7 @@ div.bg_image_wrap {
   height: 100%;
   position: absolute;
   z-index: -1;
-  background-image: url('/src/assets/images/LiaiGroup/join_us_background.jpg');
+  background-image: url('/src/assets/images/LiaiGroup/join_us_background.png');
   background-position: 25% 20%;
   background-size: cover;
   opacity: 0.4;

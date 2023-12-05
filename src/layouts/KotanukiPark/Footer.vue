@@ -59,7 +59,7 @@ footer.footer_container {
   gap: 10vw;
 }
 
-img.imogami_logo {
+img.KotanukiPark_logo {
   cursor: pointer;
 }
 
@@ -67,6 +67,7 @@ div.info {
   color: white;
 
   p {
+    font-size: 1.2vw;
     margin: 4vh 0;
   }
 }

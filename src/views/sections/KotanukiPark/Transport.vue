@@ -4,7 +4,7 @@ import Title from '@/components/KotanukiPark/Title.vue';
 </script>
 
 <template>
-  <div class="transport_container">
+  <div class="transport_container" id="transport">
     <div class="title_block">
       <Title :title="'交通資訊'" :color="'white'" />
     </div>
