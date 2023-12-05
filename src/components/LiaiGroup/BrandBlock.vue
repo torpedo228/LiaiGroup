@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 import PortalButton from '@/components/global/PortalButton.vue';
 
 const props = defineProps({
@@ -74,3 +74,4 @@ div.text_container {
   }
 }
 </style>
+@/utils/assets-url

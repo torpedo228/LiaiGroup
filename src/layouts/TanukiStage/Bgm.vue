@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-const pause = ref(true);
-let audio = new Audio('/src/assets/audio/tanuki_stage_bgm.mp3')
+import { getAudioUrl } from '@/utils/assets-url'
 
+const pause = ref(true);
+let audio = new Audio(getAudioUrl('tanuki_stage_bgm.mp3'))
 function toggleBgm() {
   pause.value = !pause.value;
   if (pause.value == false) {
@@ -51,4 +52,4 @@ div.bgm_control {
 //   right: 20vw;
 //   z-index: 999;
 // }
-</style>
+</style>@/utils/assets-url

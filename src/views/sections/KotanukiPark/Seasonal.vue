@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Title from '@/components/KotanukiPark/Title.vue';
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 
 const flowerList = [
   {
@@ -147,4 +147,4 @@ div.flower_wrap {
     }
   }
 }
-</style>
+</style>@/utils/assets-url

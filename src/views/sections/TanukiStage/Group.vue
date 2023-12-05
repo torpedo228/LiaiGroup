@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 
 function switchRole(role: any, i: any) {
   roleList.splice(i, 1);
@@ -217,4 +217,4 @@ img.deco {
   right: 0;
   top: -20vh;
 }
-</style>
+</style>@/utils/assets-url
