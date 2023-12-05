@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 
 const props = defineProps({
   title: String,
@@ -67,4 +67,4 @@ img {
 .white {
   color: white;
 }
-</style>
+</style>@/utils/assets-url

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Title from '@/components/Imogami/Title.vue';
 import PortalButton from '@/components/global/PortalButton.vue';
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 
 const newsList = [
   {
@@ -156,4 +156,4 @@ div.news_wrap {
 div.more_news {
   margin: 5vh;
 }
-</style>
+</style>@/utils/assets-url

@@ -2,7 +2,7 @@
 import Title from '@/components/Imogami/Title.vue';
 import PortalButton from '@/components/global/PortalButton.vue';
 
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 
 const productList = [
   {
@@ -169,4 +169,4 @@ div.products_wrap {
 div.btn_block {
   @include flex_hm();
 }
-</style>
+</style>@/utils/assets-url

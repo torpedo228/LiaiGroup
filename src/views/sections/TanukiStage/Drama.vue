@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getImageUrl } from '@/utils/image-url'
+import { getImageUrl } from '@/utils/assets-url'
 import PortalButton from '@/components/global/PortalButton.vue';
 const dramaList = [
   {
@@ -129,4 +129,4 @@ img.deco {
   top: -15vh;
   transform: rotate(180deg);
 }
-</style>
+</style>@/utils/assets-url
