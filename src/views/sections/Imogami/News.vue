@@ -16,7 +16,7 @@ const newsList = [
     tag: "健康資訊",
     title: "甜美健康，探索地瓜的營養奇蹟！",
     content: "地瓜是一種營養豐富的食物，富含維生素、礦物質和膳食纖維，不過烹飪方式和添加的調味料可能...",
-    imgSrc: "Imogami/news/news_2.jpg"
+    imgSrc: "Imogami/news/news_2.png"
   },
   {
     date: "2023.11.23",

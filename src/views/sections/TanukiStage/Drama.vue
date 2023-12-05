@@ -31,8 +31,8 @@ const dramaList = [
       <img src="@/assets/images/TanukiStage/title/title_drama.svg" alt="">
     </div>
     <p class="slogan">Discover our shows, book your tickets</p>
-    <div class="drama_wrap">
-      <div class="drama" v-for="drama in dramaList" :key="drama.title">
+    <div class="drama_wrap" >
+      <div data-aos="zoom-in-down" data-aos-mirror="false" class="drama" v-for="drama in dramaList" :key="drama.title">
         <h3 class="title">{{ drama.title }}</h3>
         <div class="btn_block">
           <PortalButton content="了解更多" type="tanuki_stage_learn_more" routingLink="#" />

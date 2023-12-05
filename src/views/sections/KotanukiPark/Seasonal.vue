@@ -49,7 +49,7 @@ const flowerList = [
 </script>
 
 <template>
-  <div class="seasonal_container">
+  <div class="seasonal_container" id="seasonal">
     <div class="title_block">
       <Title :title="'當季花卉 (9月~12月)'" :color="'pink'" />
     </div>
@@ -107,11 +107,17 @@ div.flower_wrap {
 
     div.img_block {
       overflow: hidden;
+      border-radius: $br_PC;
 
       img {
-        border-radius: $br_PC;
         width: 100%;
         object-fit: cover;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+          transition: 0.2s;
+        }
       }
     }
 
