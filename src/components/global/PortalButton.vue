@@ -17,6 +17,8 @@ enum TYPE {
   kotanuki_park_all_news = "kotanuki_park_all_news_btn_color",
   tanuki_stage_order = "tanuki_stage_order_btn_color",
   tanuki_stage_learn_more = "tanuki_stage_learn_more_btn_color",
+  tanuki_stage_invite = "tanuki_stage_invite_btn_color",
+  tanuki_stage_tickets = "tanuki_stage_tickets_btn_color",
 }
 
 </script>
@@ -142,6 +144,20 @@ i {
   border: 1px solid $white;
 
   @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
+}
 
+.tanuki_stage_tickets_btn_color {
+  background-color: $tanukiStageSecondary;
+  color: $white;
+  border: 1px solid $tanukiStageSecondary;
+
+  @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
+}
+.tanuki_stage_invite_btn_color {
+  background-color: $white;
+  color: $tanukiStageSecondary;
+  border: 1px solid $white;
+
+  @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
 }
 </style>
