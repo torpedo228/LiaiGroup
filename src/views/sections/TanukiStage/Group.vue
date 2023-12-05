@@ -1,42 +1,43 @@
 <script setup lang="ts">
 import { getImageUrl } from '@/utils/assets-url'
+import { ref } from 'vue'
 
-function switchRole(role: any, i: any) {
-  roleList.splice(i, 1);
-  roleList.unshift(role);
-}
-
+const currentRoleIndex = ref(0);
 
 const roleList = [
   {
     roleName: "白胖肥龍",
     act: "二狸貓",
     drama: "尋龍記",
-    intro: "驚心動魄的一場冒險，一隻發現自己身世的狸貓...",
+    intro: "小狸貓一族的二狸貓，在某次的冒險中，發現了一個古老的巨大龍族寺廟，寺廟中保存著龍族的歷史和記錄。當二狸貓靠近時，一股強大的力量將其吸引進寺廟深處，啟動了龍族的神秘基因，在神秘的轉變中，二狸貓的身體逐漸展現出龍族的特徵，身上的毛皮逐漸轉為逆鱗，黝黑的眼中閃爍著龍族特有的光芒...",
     imgSrc: "TanukiStage/group/white_fat_dragon.png"
   },
   {
     roleName: " 哈密瓜龍",
     act: "星龜",
-    drama: "尋龍記",
-    intro: "驚心動魄的一場冒險，一隻發現自己身世的狸貓...",
+    drama: "尋龍記 之二",
+    intro: "哈密瓜龍的故事始於遠古時代，當它從星辰大海誕生出來時，便帶著宇宙的能量和智慧。它的哈密瓜則被視為連接星辰之力的載體，擁有治癒和保護的神奇效果。在長時間的守護過程中，哈密瓜龍感受到異世界的變化和危機。於是，它開始積極尋找能夠協助守護的夥伴。這時，它遇到了二狸貓，那隻被命運選中的狸貓，同時也是彩虹力量的使者...",
     imgSrc: "TanukiStage/group/star_turtle.png"
   },
   {
     roleName: "師父",
     act: "小狸貓",
     drama: "狸之起源",
-    intro: "驚心動魄的一場冒險，一隻發現自己身世的狸貓...",
+    intro: "在廣袤的大陸上，各種野生動物和神奇的獸群自由地漫遊。人們發現，這些生物中的一部分具有超自然的力量，而且可以與人類建立契約，成為靈獸。而冒險者們的目標始終都是傳說中最強大的靈獸「小狸貓一族」，它們一直被賦予神秘色彩，沒有人真正確定它們是否存在，直到那天......",
     imgSrc: "TanukiStage/group/master.png"
   },
   {
     roleName: "禿頭海豹",
     act: "二狸貓",
     drama: "狸之起源",
-    intro: "驚心動魄的一場冒險，一隻發現自己身世的狸貓...",
+    intro: "遠古壁畫中小海豹戴上狸貓帽進化成小狸貓一族的傳說，一直是這個世界的謎團之一。主人公「闡釋者」決定追尋這個傳說的源頭，解開更多有關小海豹與小狸貓一族之間的秘密，精彩的冒險將在此揭開序幕。",
     imgSrc: "TanukiStage/group/hage_seal.png"
   }
 ]
+
+function switchRole(i: any) {
+  currentRoleIndex.value = i;
+}
 </script>
 
 <template>
@@ -44,46 +45,48 @@ const roleList = [
     <div class="title_block">
       <img src="@/assets/images/TanukiStage/title/title_group.svg" alt="">
     </div>
-    <div class="introduce">
-
+    <div class="introduce" data-aos="flip-left">
       <div class="focus_wrap">
-        <img class="show" v-for="role in roleList" :key="role.roleName" :src="getImageUrl(role.imgSrc as string)"
-          :alt="role.roleName">
+        <img class="show" :src="getImageUrl(roleList[currentRoleIndex].imgSrc as string)"
+          :alt="roleList[currentRoleIndex].roleName">
         <img src="@/assets/images/TanukiStage/group/background_deco.svg" alt="">
       </div>
 
       <div class="role_container">
         <div class="role_wrap">
-          <div class="role_block" v-for="role in roleList" :key="role.roleName" @click="switchRole(role, 0)">
+          <div class="role_block" v-for="(role, i) in roleList" :key="role.roleName" @click="switchRole(i)">
             <img :src="getImageUrl(role.imgSrc as string)" :alt="role.roleName">
           </div>
         </div>
 
         <div class="content_wrap">
-          <div class="content" v-for="role in roleList" :key="role.roleName">
+          <div class="content">
             <div class="title_wrap">
-              <h4 class="roleName">{{ role.roleName }}</h4>
-              <span class="act">{{ role.act }} 飾</span>
+              <h4 class="roleName">{{ roleList[currentRoleIndex].roleName }}</h4>
+              <span class="act">{{ roleList[currentRoleIndex].act }} 飾</span>
               <RouterLink to="">
 
-                <div class="drama" title="前往購票">{{ role.drama }}</div>
+                <div class="drama" title="前往購票"><i
+                    class="fa-solid fa-quote-left"></i>{{ roleList[currentRoleIndex].drama }}<i
+                    class="fa-solid fa-quote-right"></i>
+                </div>
               </RouterLink>
             </div>
-            <p>{{ role.intro }}</p>
+            <p>{{ roleList[currentRoleIndex].intro }}</p>
           </div>
         </div>
 
       </div>
     </div>
 
-    <img class="deco" src="@/assets/images/TanukiStage/deco.svg" alt="">
+    <img data-aos="slide-left" class="deco" src="@/assets/images/TanukiStage/deco.svg"
+      alt="">
 
   </div>
 </template>
 
 <style scoped lang="scss">
 div.group_container {
-
   width: 80%;
   margin-left: auto;
   position: relative;
@@ -91,30 +94,31 @@ div.group_container {
 
 div.introduce {
   margin: auto;
-  width: 60vw;
+  width: 70vw;
   height: 60vh;
   display: flex;
   gap: 3vw;
 
   div.focus_wrap {
+
     position: relative;
+    width: 20vw;
+    height: 20vw;
+    @include flex_hm();
 
     img.show {
+      width: 100%;
       width: 20vw;
       position: absolute;
-      display: none;
-      right: 0;
-    }
-
-    img.show:first-child {
       display: block;
+      right: 0;
     }
   }
 
   div.role_container {
+    width: 80%;
     @include flex_vm_js();
-    gap: 10vh;
-
+    gap: 5vh;
 
     div.role_wrap {
       @include flex_hm();
@@ -143,15 +147,7 @@ div.introduce {
     }
 
     div.content_wrap {
-
-      div.content {
-        display: none;
-      }
-
-      div.content:first-child {
-        display: block;
-
-      }
+      width: 80%;
 
       div.title_wrap {
         display: flex;
@@ -161,6 +157,7 @@ div.introduce {
         padding-bottom: 2vh;
 
         h4 {
+          width: 30%;
           color: $textColor;
           font-size: 2vw;
           font-weight: $fwBold;
@@ -171,7 +168,10 @@ div.introduce {
         }
 
         div {
-          font-size: 1.5vw;
+          @include flex_hm();
+          gap: 1vw;
+          width: 12vw;
+          font-size: 1.2vw;
           padding: 0.5vw;
           color: white;
           background-color: $tanukiStageSecondary;
@@ -217,4 +217,4 @@ img.deco {
   right: 0;
   top: -20vh;
 }
-</style>@/utils/assets-url
+</style>

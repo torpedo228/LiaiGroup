@@ -23,5 +23,6 @@ import Bgm from '@/layouts/TanukiStage/Bgm.vue';
 <style scoped lang="scss">
 div.tanuki_stage_section_container {
   font-family: $regularFont;
+  overflow-x: hidden;
 }
 </style>

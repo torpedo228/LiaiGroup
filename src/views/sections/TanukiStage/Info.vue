@@ -5,7 +5,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
 <template>
   <div class="drama_container" id="info">
 
-    <div class="item tickets">
+    <div data-aos="slide-right" class="item tickets">
       <div class="title_block">
         <img class="big" src="@/assets/images/TanukiStage/title/title_tickets.svg" alt="">
       </div>
@@ -21,11 +21,13 @@ import PortalButton from '@/components/global/PortalButton.vue';
           <PortalButton content="票怎麼買?" type="tanuki_stage_tickets" routingLink="#" />
         </div>
       </div>
-      <img class="buy_tickets" src="@/assets/images/TanukiStage/info/buy_tickets.png" alt="">
+      <a href="https://www.buymeacoffee.com/tanuki.jr">
+        <img class="buy_tickets" src="@/assets/images/TanukiStage/info/buy_tickets.png" alt="">
+      </a>
       <img class="tickets_deco" src="@/assets/images/TanukiStage/info/tickets_deco.svg" alt="">
     </div>
 
-    <div class="item invite">
+    <div data-aos="slide-down" class="item invite">
       <div class="title_block">
         <img src="@/assets/images/TanukiStage/title/title_invite.svg" alt="">
       </div>
@@ -38,7 +40,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
       </div>
     </div>
 
-    <div class="item member">
+    <div data-aos="slide-up" class="item member">
       <RouterLink to="">
         <div class="title_block">
           <img src="@/assets/images/TanukiStage/title/title_member.svg" alt="">
@@ -48,7 +50,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
       </RouterLink>
     </div>
 
-    <div class="item join_us">
+    <div data-aos="slide-left" class="item join_us">
       <RouterLink to="">
         <div class="title_block">
           <img src="@/assets/images/TanukiStage/title/title_join_us.svg" alt="">
@@ -80,6 +82,7 @@ div.drama_container {
   grid-area: tickets;
   position: relative;
   @include flex_vm_js();
+
   div.content_wrap {
     position: relative;
     z-index: 10;
@@ -110,7 +113,7 @@ div.drama_container {
     }
   }
 
-  div.btn_block{
+  div.btn_block {
     position: absolute;
     bottom: 0;
   }
@@ -124,6 +127,7 @@ div.drama_container {
     bottom: 4vh;
     right: 5vw;
     opacity: 0.5;
+    z-index: 20;
   }
 
   img.tickets_deco {
@@ -181,7 +185,7 @@ div.title_block {
     width: 15vw;
   }
 
-  img.big{
+  img.big {
     width: 20vw;
   }
 }
