@@ -15,8 +15,8 @@ const dramaList = [
     imgSrc: "TanukiStage/drama/drama_03.png"
   },
   {
-    title: "Dancing Beast",
-    imgSrc: "TanukiStage/drama/drama_03.png"
+    title: "Dancing Beast 2",
+    imgSrc: "TanukiStage/drama/drama_04.png"
   },
   {
     title: "尋龍記",
@@ -26,7 +26,7 @@ const dramaList = [
 </script>
 
 <template>
-  <div class="drama_container">
+  <div class="drama_container" id="drama">
     <div class="title_block">
       <img src="@/assets/images/TanukiStage/title/title_drama.svg" alt="">
     </div>
@@ -53,10 +53,11 @@ div.drama_container {
   margin-left: auto;
   position: relative;
   background-color: $tanukiStageSecondary;
-
 }
 
 div.title_block {
+  width: 20vw;
+  transform: translateX(50vw);
   margin: 5vh 5vw 2vh;
 
   img {
@@ -101,8 +102,8 @@ div.drama_wrap {
 
     div.btn_block {
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: 1vh;
+      right: 1vw;
     }
   }
 
@@ -124,7 +125,8 @@ div.drama_wrap {
 img.deco {
   position: absolute;
   height: 30vh;
-  right: 0;
-  top: -20vh;
+  left: 0;
+  top: -15vh;
+  transform: rotate(180deg);
 }
 </style>

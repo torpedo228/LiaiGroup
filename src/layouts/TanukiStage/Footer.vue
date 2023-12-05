@@ -81,11 +81,15 @@ div.branch_wrap {
       font-weight: $fwBold;
     }
 
+    div.contact_wrap {
+      display: flex;
+      gap: 2vw;
+    }
+
     a.map {
       text-decoration: underline;
     }
   }
-
 }
 
 
@@ -94,7 +98,7 @@ div.vl {
   height: 10vh;
   background-color: white;
   position: absolute;
-  top:50%;
+  top: 50%;
 }
 
 div.info {
