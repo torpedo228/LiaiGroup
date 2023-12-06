@@ -156,4 +156,4 @@ div.news_wrap {
 div.more_news {
   margin: 5vh;
 }
-</style>@/utils/assets-url
+</style>

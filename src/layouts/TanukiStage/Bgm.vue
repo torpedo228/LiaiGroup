@@ -52,4 +52,4 @@ div.bgm_control {
 //   right: 20vw;
 //   z-index: 999;
 // }
-</style>@/utils/assets-url
+</style>

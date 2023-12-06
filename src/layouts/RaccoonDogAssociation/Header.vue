@@ -1,42 +1,42 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
+onMounted(() => {
+  window.addEventListener("scroll", whenScroll);
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', whenScroll);
+})
+
+const scrollToDarkBg = ref(true);
+const showUnlock = ref(false);
+
+let news = document.getElementById('news');
+let introduce = document.getElementById('introduce');
+let actions = document.getElementById('actions');
+let help = document.getElementById('help');
+
+function whenScroll() {
+  if (window.scrollY >= 700 && window.scrollY < 1400 || window.scrollY >= 1900) {
+    scrollToDarkBg.value = false
+    showUnlock.value = true;
+  } else {
+    scrollToDarkBg.value = true
+  }
+}
+
 function reload() {
   location.replace(location.pathname);
 }
-
-// const navList = [
-//   {
-//     title: '公園資訊',
-//     icon: 'circle-info',
-//     route: '#info',
-//   },
-//   {
-//     title: '設施介紹',
-//     icon: 'house-chimney-window',
-//     route: '#facilty',
-//   },
-//   {
-//     title: '當季花卉',
-//     icon: 'leaf',
-//     route: '#seasonal',
-//   },
-//   {
-//     title: '活動總覽',
-//     icon: 'calendar-day',
-//     route: '#event',
-//   },
-//   {
-//     title: '交通資訊',
-//     icon: 'car',
-//     route: '#transport',
-//   }
-// ]
 </script>
 
 <template>
   <div class="header_container">
     <div class="logo_wrap" @click=reload>
-      <img class="RaccoonDogAssociation_logo" src="@/assets/images/RaccoonDogAssociation/logo/logo.svg"
-        alt="RaccoonDogAssociation_logo">
+      <img v-if="scrollToDarkBg" class="RaccoonDogAssociation_logo"
+        src="@/assets/images/RaccoonDogAssociation/logo/logo_white.svg" alt="RaccoonDogAssociation_logo">
+      <img v-else-if="!scrollToDarkBg" class="RaccoonDogAssociation_logo"
+        src="@/assets/images/RaccoonDogAssociation/logo/logo_green.svg" alt="RaccoonDogAssociation_logo">
     </div>
     <a href="https://www.buymeacoffee.com/tanuki.jr">
       <div class="donate">
@@ -74,7 +74,16 @@ div.donate {
   @include flex_hm();
   overflow: hidden;
 
-  @include sendEffect();
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
 
   p {
     width: 8vw;

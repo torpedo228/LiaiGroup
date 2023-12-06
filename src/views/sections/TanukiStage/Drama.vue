@@ -31,7 +31,7 @@ const dramaList = [
       <img src="@/assets/images/TanukiStage/title/title_drama.svg" alt="">
     </div>
     <p class="slogan">Discover our shows, book your tickets</p>
-    <div class="drama_wrap" >
+    <div class="drama_wrap">
       <div data-aos="zoom-in-down" data-aos-mirror="false" class="drama" v-for="drama in dramaList" :key="drama.title">
         <h3 class="title">{{ drama.title }}</h3>
         <div class="btn_block">
@@ -41,8 +41,8 @@ const dramaList = [
       </div>
     </div>
 
-    <img class="deco" src="@/assets/images/TanukiStage/deco.svg" alt="deco">
-
+    <img class="deco up" src="@/assets/images/TanukiStage/deco.svg" alt="deco">
+    <img class="deco bottom" src="@/assets/images/TanukiStage/deco.svg" alt="">
   </div>
 </template>
 
@@ -125,8 +125,16 @@ div.drama_wrap {
 img.deco {
   position: absolute;
   height: 30vh;
+}
+
+img.up {
   left: 0;
   top: -15vh;
   transform: rotate(180deg);
 }
-</style>@/utils/assets-url
+
+img.bottom {
+  right: 0;
+  bottom: -15vh;
+}
+</style>

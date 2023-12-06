@@ -1,47 +1,142 @@
 <script setup lang="ts">
 import CopyRight from '@/components/global/CopyRight.vue';
+import SocialMedia from '@/components/global/SocialMedia.vue';
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-const branchList = [
+const navList = [
   {
-    location: "台北・TAIPEI",
-    tel: "02-222-2222",
-    fax: "02-222-2222",
-    address: "22222 狸愛市狸愛區狸之星一路2號"
+    title: "最新消息",
+    subTitle:
+      [
+        {
+          name: "重要事件",
+          url: "#"
+        },
+        {
+          name: "徵信報告",
+          url: "#"
+        }
+      ]
   },
   {
-    location: "台南・TAINAN",
-    tel: "02-222-2222",
-    fax: "02-222-2222",
-    address: "22222 狸愛市狸愛區狸之星二路22號"
+    title: "認識狸貓",
+    subTitle:
+      [
+        {
+          name: "狸猫習性",
+          url: "#"
+        },
+        {
+          name: "狸貓數據",
+          url: "#"
+        }
+      ]
   },
+  {
+    title: "保育行動",
+    subTitle:
+      [
+        {
+          name: "動物資訊傳播",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "動物福利宣導",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "動保講師培訓",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "動物友善教育",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        }
+      ]
+  },
+  {
+    title: "幫助狸貓",
+    subTitle:
+      [
+        {
+          name: "單筆捐款",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "定期捐款",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "專案捐款",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "發票愛心捐",
+          url: "https://www.buymeacoffee.com/tanuki.jr"
+        },
+        {
+          name: "其他響應方式",
+          url: "/LiaiGroup/tanuki"
+        }
+      ]
+  },
+]
+
+
+const socialMediaList = [
+  {
+    label: "facebook",
+    url: "/"
+  },
+  {
+    label: "instagram",
+    url: "/"
+  },
+  {
+    label: "twitter",
+    url: "/"
+  },
+  {
+    label: "youtube",
+    url: "/"
+  }
 ]
 </script>
 
 <template>
   <footer class="footer_container">
 
-    <div class="logo_wrap" @click=scrollToTop>
-      <img class="tanuki_stage_logo" src="@/assets/images/TanukiStage/logo/logo_footer.svg" alt="TanukiStage logo">
-    </div>
-    <div class="branch_wrap">
-      <div class="branch" v-for="branch in branchList" :key="branch.location">
-        <h4 class="location">{{ branch.location }}</h4>
-        <div class="contact_wrap">
-          <span class="tel">TEL {{ branch.tel }}</span>
-          <span class="fax">FAX {{ branch.fax }}</span>
-        </div>
-        <p class="address">{{ branch.address }}</p>
-        <a href="" class="map">Map</a>
+    <div class="left_section">
+      <div class="logo_wrap" @click=scrollToTop>
+        <img class="RaccoonDogAssociation_logo" src="@/assets/images/RaccoonDogAssociation/logo/logo_white.svg"
+          alt="TanukiStage logo">
+      </div>
+      <div class="info_wrap">
+        <p><i class="fa-solid fa-house"></i>222 狸愛市狸愛區保狸路一號</p>
+        <p><i class="fa-solid fa-phone"></i>(02)-222-2222</p>
+        <p><i class="fa-solid fa-envelope"></i>service@raccoondog.org</p>
+      </div>
+      <div class="social_media_wrap">
+        <SocialMedia v-for="socialMedia in socialMediaList" :key="socialMedia.label" :label="socialMedia.label"
+          :url="socialMedia.url" />
       </div>
     </div>
-    <div class="vl"></div>
+
+    <div class="navList_wrap">
+      <div class="section" v-for="section in navList" :key="section.title">
+        <h3 class="title">{{ section.title }}</h3>
+        <h4 class="subTitle" v-for="subSection in section.subTitle" :key="subSection.name">
+          <a :href="subSection.url">{{ subSection.name }}</a>
+        </h4>
+      </div>
+    </div>
+
     <div class="bottom_section">
       <div class="copyright">
-        <CopyRight :content="'Tanuki Stage ALL RIGHTS RESERVED'" />
+        <CopyRight :content="' Raccoon Dog Association ALL RIGHTS RESERVED'" />
       </div>
       <div class="statement">
         <a href="">關於我們 </a> | <a href="">隱私權政策</a> | <a href="">友站連結</a>
@@ -54,60 +149,52 @@ const branchList = [
 <style scoped lang="scss">
 footer.footer_container {
   width: 100%;
-  height: 50vh;
-  margin-left: auto;
-  background-color: $tanukiStageDecoration;
+  height: 60vh;
   position: relative;
-  @include flex_vm();
-  gap: 3vh;
+  gap: 20vw;
+  color: white;
+  @include flex_hm_as();
+  @include rdaGradient_footer();
+  padding-top: 10vh;
 }
 
-img.tanuki_stage_logo {
-  width: 20vw;
+img.RaccoonDogAssociation_logo {
+  width: 25vw;
   cursor: pointer;
 }
 
-div.branch_wrap {
-  @include flex_hm();
-  gap: 8vw;
+div.left_section {
+  @include flex_vm_as();
+  gap: 5vh;
 
-  div.branch {
-    @include flex_vm();
-    gap: 1vh;
-
-
-    h4.location {
-      color: $tanukiStagePrimary;
-      font-weight: $fwBold;
-    }
-
-    div.contact_wrap {
-      display: flex;
-      gap: 2vw;
-    }
-
-    a.map {
-      text-decoration: underline;
-    }
-  }
 }
 
-
-div.vl {
-  width: 0.2vw;
-  height: 10vh;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-}
-
-div.info {
-  color: white;
+div.info_wrap {
+  @include flex_vm_as();
+  gap: 4vh;
 
   p {
-    margin: 4vh 0;
+    font-size: 1.2vw;
+    @include flex_hm();
+    gap: 1vw;
   }
 }
+
+div.navList_wrap {
+  @include flex_hm_as();
+  gap: 3vw;
+  text-align: center;
+
+  h3.title {
+    padding-bottom: 1vh;
+    border-bottom: 1px solid white;
+  }
+
+  h4.subTitle {
+    padding: 1vh 0;
+  }
+}
+
 
 div.social_media_wrap {
   @include flex_hm();
@@ -115,20 +202,16 @@ div.social_media_wrap {
 }
 
 div.bottom_section {
-  width: 90%;
-  padding-top: 2vh;
+  position: absolute;
+  bottom: 1vh;
+  right: 2vw;
   @include flex_hm();
   gap: 5vw;
-  border-top: 0.2vw solid white;
-
-}
-
-div.copyright {
-  color: $textColor;
+  color: white;
 }
 
 a {
-  color: $textColor;
+  color: white;
 
   &:hover {
     opacity: 0.7;

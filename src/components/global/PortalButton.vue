@@ -19,6 +19,10 @@ enum TYPE {
   tanuki_stage_learn_more = "tanuki_stage_learn_more_btn_color",
   tanuki_stage_invite = "tanuki_stage_invite_btn_color",
   tanuki_stage_tickets = "tanuki_stage_tickets_btn_color",
+  rda_more_news = "rda_action_btn_color",
+  rda_intro = "rda_intro_btn_color",
+  rda_action = "rda_action_btn_color",
+
 }
 
 </script>
@@ -90,7 +94,6 @@ i {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $liaiGroupPrimary;
-
   @include btnEffect($liaiGroupPrimary, $white, $liaiGroupPrimary);
 }
 
@@ -98,15 +101,14 @@ i {
   background-color: $white;
   color: $liaiGroupPrimary;
   border: 1px solid $white;
-
   @include btnEffect(white, $liaiGroupPrimary, $white);
 }
 
+// imogami
 .imogami_more_btn_color {
   background-color: $imogamiSecondary;
   color: $imogamiPrimary;
   border: 1px solid $imogamiSecondary;
-
   @include btnEffect($imogamiPrimary, $imogamiSecondary, $imogamiPrimary);
 }
 
@@ -114,35 +116,36 @@ i {
   background-color: $imogamiSecondary;
   color: $imogamiPrimary;
   border: 1px solid $imogamiSecondary;
-
   @include btnEffect($white, $imogamiSecondary, $white);
 }
+
 .imogami_full_news_btn_color {
   background-color: $white;
   color: $imogamiSecondary;
   border: 1px solid $white;
-
   @include btnEffect($imogamiSecondary, $white, $imogamiSecondary);
 }
+
+// kotanuki_park
 .kotanuki_park_all_news_btn_color {
   background-color: $kotanukiParkPrimary;
   color: $white;
   border: 1px solid $kotanukiParkPrimary;
-
   @include btnEffect($kotanukiParkPrimary, $white, $kotanukiParkPrimary);
 }
+
+// tanuki_stage
 .tanuki_stage_order_btn_color {
   background-color: $tanukiStagePrimary;
   color: $white;
   border: 1px solid $tanukiStagePrimary;
-
   @include btnEffect($white, $tanukiStagePrimary, $white);
 }
+
 .tanuki_stage_learn_more_btn_color {
   background-color: none;
   color: $white;
   border: 1px solid $white;
-
   @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
 }
 
@@ -150,14 +153,34 @@ i {
   background-color: $tanukiStageSecondary;
   color: $white;
   border: 1px solid $tanukiStageSecondary;
-
   @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
 }
+
 .tanuki_stage_invite_btn_color {
   background-color: $white;
   color: $tanukiStageSecondary;
   border: 1px solid $white;
-
   @include btnEffect($tanukiStagePrimary, $white, $tanukiStagePrimary);
 }
-</style>
+
+
+// rda
+.rda_action_btn_color {
+  background-color: $rdaSecondary;
+  color: $white;
+  border: 1px solid $rdaSecondary;
+  @include btnEffect($rdaPrimary, $white, $rdaPrimary);
+}
+.rda_intro_btn_color {
+  background-color: $rdaSecondary;
+  color: $white;
+  border: 1px solid $rdaSecondary;
+  @include btnEffect($rdaPrimary, $white, $rdaPrimary);
+}
+
+.rda_action_btn_color {
+  background-color: $rdaPrimary;
+  color: $white;
+  border: 1px solid $rdaPrimary;
+  @include btnEffect($rdaSecondary, $white, $rdaSecondary);
+}</style>

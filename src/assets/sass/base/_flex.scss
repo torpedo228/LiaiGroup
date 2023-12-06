@@ -19,6 +19,21 @@
   align-items: start;
 }
 
+@mixin flex_vm_je() {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+@mixin flex_vm_ae() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+
 // 水平置中
 @mixin flex_hm() {
   display: flex;
@@ -37,4 +52,17 @@
   display: flex;
   justify-content: center;
   align-items: start;
+}
+
+@mixin flex_hm_je() {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+
+@mixin flex_hm_ae() {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }

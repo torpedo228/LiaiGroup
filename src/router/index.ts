@@ -39,6 +39,11 @@ const router = createRouter({
       path: '/tanuki-stage',
       name: 'Tanuki Stage',
       component: () => import('@/views/pages/TanukiStage/TanukiStageHome.vue')
+    },
+    {
+      path: '/tanuki',
+      name: 'Tanuki',
+      component: () => import('@/components/global/Tanuki.vue')
     }
   ]
 })
