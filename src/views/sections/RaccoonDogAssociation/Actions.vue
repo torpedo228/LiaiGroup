@@ -11,4 +11,10 @@ import Title from '@/components/RaccoonDogAssociation/Title.vue';
     </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+div.actions_container {
+  width: 100%;
+  height: 100vh;
+
+}</style>

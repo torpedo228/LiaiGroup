@@ -14,7 +14,6 @@ import Footer from '@/layouts/RaccoonDogAssociation/Footer.vue';
     <Hero />
     <News />
     <Introduce />
-    <Introduce />
     <Actions />
     <Info />
     <Help />
@@ -24,7 +23,7 @@ import Footer from '@/layouts/RaccoonDogAssociation/Footer.vue';
 
 <style scoped lang="scss">
 div.raccoon_dog_association_section_container {
-  font-family: $regularFont;
+  font-family: $rdaFont;
   overflow-x: hidden;
 }
 </style>

@@ -30,7 +30,7 @@ $rdaDecoration:#E07A5F;
 
 @mixin rdaGradient() {
   background: rgb(58, 90, 64);
-  background: linear-gradient(90deg, rgba(58, 90, 64, 1) 35%, rgba(163, 177, 138, 1) 100%);
+  background: linear-gradient(180deg, rgba(58, 90, 64, 1) 90%, rgba(163, 177, 138, 1) 100%);
 }
 
 // 狸劇團 Tanuki Stage

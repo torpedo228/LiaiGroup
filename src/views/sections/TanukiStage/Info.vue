@@ -27,7 +27,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
       <img class="tickets_deco" src="@/assets/images/TanukiStage/info/tickets_deco.svg" alt="">
     </div>
 
-    <div data-aos="slide-down" class="item invite">
+    <div data-aos="slide-down" data-aos-anchor-placement="#info" class="item invite">
       <div class="title_block">
         <img src="@/assets/images/TanukiStage/title/title_invite.svg" alt="">
       </div>
@@ -40,7 +40,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
       </div>
     </div>
 
-    <div data-aos="slide-up" class="item member">
+    <div data-aos="slide-up" data-aos-mirror="false" class="item member">
       <RouterLink to="">
         <div class="title_block">
           <img src="@/assets/images/TanukiStage/title/title_member.svg" alt="">
@@ -50,7 +50,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
       </RouterLink>
     </div>
 
-    <div data-aos="slide-left" class="item join_us">
+    <div data-aos="slide-left" data-aos-mirror="false" class="item join_us">
       <RouterLink to="">
         <div class="title_block">
           <img src="@/assets/images/TanukiStage/title/title_join_us.svg" alt="">
@@ -58,8 +58,6 @@ import PortalButton from '@/components/global/PortalButton.vue';
         <p class="content">秉持對藝術的熱情，無論您是戲劇系畢業，或對劇場有莫大的熱忱，期待你加入狸大家庭！</p>
       </RouterLink>
     </div>
-
-    <img class="deco" src="@/assets/images/TanukiStage/deco.svg" alt="">
   </div>
 </template>
 
@@ -106,7 +104,6 @@ div.drama_container {
         gap: 3vw;
 
         span:first-child {
-
           width: 10vw;
         }
       }
@@ -188,13 +185,5 @@ div.title_block {
   img.big {
     width: 20vw;
   }
-}
-
-
-img.deco {
-  position: absolute;
-  height: 30vh;
-  right: 0;
-  top: -15vh;
 }
 </style>

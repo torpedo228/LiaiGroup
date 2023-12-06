@@ -54,12 +54,12 @@ const branchList = [
 <style scoped lang="scss">
 footer.footer_container {
   width: 100%;
-  height: 50vh;
-  margin-left: auto;
-  background-color: $tanukiStageDecoration;
+  height: 60vh;
   position: relative;
   @include flex_vm();
   gap: 3vh;
+
+  @include rdaGradient();
 }
 
 img.tanuki_stage_logo {

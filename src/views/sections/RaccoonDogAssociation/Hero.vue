@@ -30,7 +30,7 @@ const heroList = [
 
 
     <div class="scroll_down_wrap">
-      <p>幫助狸貓</p>
+      <p>幫助狸猫</p>
       <RouterLink to="#news">
         <div class="icon_wrap">
           <i class="fa-solid fa-handshake-angle animate__animated animate__shakeY animate__infinite"></i>

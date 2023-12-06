@@ -18,7 +18,6 @@ const props = defineProps({
 div.title_container {
   text-align: start;
   z-index: 10;
-  width: 30vw;
   position: relative;
 }
 
@@ -26,6 +25,7 @@ div.title {
   position: relative;
   display: flex;
   align-items: center;
+
 
   img {
     width: 4vw;
