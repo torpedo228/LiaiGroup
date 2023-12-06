@@ -24,7 +24,9 @@ const heroList = [
       </Slide>
       <template #addons>
         <Navigation />
-        <Pagination />
+        <div class="pagination">
+          <Pagination />
+        </div>
       </template>
     </Carousel>
 
@@ -130,7 +132,7 @@ div.scroll_down_wrap {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 90vh;
+  top: 88vh;
   @include flex_vm();
   gap: 1vh;
 
@@ -155,5 +157,14 @@ div.scroll_down_wrap {
       animation-duration: 8s
     }
   }
+}
+
+
+div.pagination {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 </style>

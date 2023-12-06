@@ -153,9 +153,9 @@ footer.footer_container {
   position: relative;
   gap: 20vw;
   color: white;
-  @include flex_hm();
-
+  @include flex_hm_as();
   @include rdaGradient_footer();
+  padding-top: 10vh;
 }
 
 img.RaccoonDogAssociation_logo {
@@ -166,14 +166,15 @@ img.RaccoonDogAssociation_logo {
 div.left_section {
   @include flex_vm_as();
   gap: 5vh;
-  margin: 1vw;
+
 }
 
 div.info_wrap {
   @include flex_vm_as();
-  gap: 2vh;
+  gap: 4vh;
 
   p {
+    font-size: 1.2vw;
     @include flex_hm();
     gap: 1vw;
   }

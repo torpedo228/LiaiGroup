@@ -17,46 +17,17 @@ let actions = document.getElementById('actions');
 let help = document.getElementById('help');
 
 function whenScroll() {
-return;
-  // if (window.scrollY >= news?.offsetTop) {
-  //   scrollToDarkBg.value = false
-  //   showUnlock.value = true;
-  // } else if (window.scrollY < threshold && scrollToDarkBg) {
-  //   scrollToDarkBg.value = true;
-  // }
+  if (window.scrollY >= 700 && window.scrollY < 1400 || window.scrollY >= 1900) {
+    scrollToDarkBg.value = false
+    showUnlock.value = true;
+  } else {
+    scrollToDarkBg.value = true
+  }
 }
 
 function reload() {
   location.replace(location.pathname);
 }
-
-// const navList = [
-//   {
-//     title: '公園資訊',
-//     icon: 'circle-info',
-//     route: '#info',
-//   },
-//   {
-//     title: '設施介紹',
-//     icon: 'house-chimney-window',
-//     route: '#facilty',
-//   },
-//   {
-//     title: '當季花卉',
-//     icon: 'leaf',
-//     route: '#seasonal',
-//   },
-//   {
-//     title: '活動總覽',
-//     icon: 'calendar-day',
-//     route: '#event',
-//   },
-//   {
-//     title: '交通資訊',
-//     icon: 'car',
-//     route: '#transport',
-//   }
-// ]
 </script>
 
 <template>
