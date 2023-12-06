@@ -20,10 +20,6 @@
         <p>地點：小狸花道、幸福走廊</p>
       </div>
     </div>
-
-    <a class="sponsor" href="https://www.buymeacoffee.com/tanuki.jr"></a>
-    <img src="@/assets/images/KotanukiPark/hero/hero_img.svg" alt="">
-
   </div>
 </template>
 

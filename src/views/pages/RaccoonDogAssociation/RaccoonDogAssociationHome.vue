@@ -14,7 +14,6 @@ import Footer from '@/layouts/RaccoonDogAssociation/Footer.vue';
     <Hero />
     <News />
     <Introduce />
-    <Introduce />
     <Actions />
     <Info />
     <Help />
