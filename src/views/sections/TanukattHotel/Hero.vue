@@ -4,22 +4,10 @@
 
 <template>
   <div class="hero_container">
-    <div class="today_info">
-      <div class="regular">
-        <h3>11月26日(日) 開園情報</h3>
-        <div class="span_wrap">
-          <span>全園區</span><span>9:30~21:00</span>
-        </div>
-        <div class="span_wrap">
-          <span>小狸文化館</span><span>10:30~16:30</span>
-        </div>
-      </div>
-      <div class="event">
-        <h4>「冬夜散歩」開催中</h4>
-        <p>時間：16:30~21:00</p>
-        <p>地點：小狸花道、幸福走廊</p>
-      </div>
-    </div>
+
+
+    <img src="@/assets/images/TanukattHotel/hero/hero_img.png" alt="hero_img">
+
   </div>
 </template>
 

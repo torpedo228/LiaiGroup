@@ -24,6 +24,7 @@ import Footer from '@/layouts/TanukattHotel/Footer.vue';
 
 <style scoped lang="scss">
 div.tanukatt_hotel_section_container {
-  font-family: $kotanukiFont;
+  font-family: $regularFont;
+  overflow-x: hidden;
 }
 </style>
