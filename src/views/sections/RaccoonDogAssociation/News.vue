@@ -1,129 +1,150 @@
 <script setup lang="ts">
 import Title from '@/components/RaccoonDogAssociation/Title.vue';
 import PortalButton from '@/components/global/PortalButton.vue';
+import { getImageUrl } from '@/utils/assets-url'
 
 const newsList = [
   {
-    date: "2023/12/2",
-    label: "公告",
-    title: "花園內發現野生狸貓，請遊客不要隨意餵食。",
-    url: "kotanuki-park/news/news_001",
+    date: "2023.12.02",
+    title: "【狸貓之森辦公處】2023 年 12 月號徵信報告",
+    content: "狸貓之森辦公處每月報告又來囉~2023年11月，我們一起完成了這些事~",
+    imgSrc: "RaccoonDogAssociation/news/news_1.png"
   },
   {
-    date: "2023/12/1",
-    label: "公告",
-    title: "冬季夜間散步活動開催 !",
-    url: "kotanuki-park/news/news_002",
-
+    date: "2023.11.24",
+    title: "【狸貓管理局】2023 年 11 月狸猫洗澡報告",
+    content: "狸貓管理局每月報告又來囉~2023年11月，我們一起完成了這些事~",
+    imgSrc: "RaccoonDogAssociation/news/news_2.png"
   },
   {
-    date: "2023/11/30",
-    label: "休園情報",
-    title: "下周一 12/4 因設備整修 ，故休園一日。",
-    url: "kotanuki-park/news/news_003",
+    date: "2023.11.23",
+    title: "【狸猫聯邦】狸猫愛好者聚會下個月報名開跑!",
+    content: "狸猫愛好者的天堂~很大機會遇到二狸猫本人!快來報名~",
+    imgSrc: "RaccoonDogAssociation/news/news_3.png"
   }
 ]
 </script>
 
 <template>
-  <div class="news_container" id="news">
-    <div class="title_block">
+  <div class="news_container">
+    <div class="title_wrap">
       <Title :title="'最新消息 News'" />
     </div>
-
-    <div class="news_wrap">
-      <div class="label_wrap">
-        <div class="label announcement">公告</div>
-        <div class="label closed">休園情報</div>
+    <div class="whole_section">
+      <div class="left_section">
+        <div class="btn_block more_news">
+          <PortalButton content="更多新聞" type="rda_more_news" routingLink="#" />
+        </div>
+        <div class="news_wrap">
+          <div class="news" v-for="news in newsList" :key="news.title">
+            <div class="img_wrap">
+              <img :src="getImageUrl(news.imgSrc as string)" alt="">
+            </div>
+            <div class="text_wrap">
+              <div class="date_wrap">
+                <span class="date">{{ news.date }}</span>
+              </div>
+              <div class="content_wrap">
+                <h3 class="title">{{ news.title }}</h3>
+                <p class="content">{{ news.content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="news" v-for="news in  newsList " :key="news.title">
-        <span class="date">{{ news.date }}</span>
-        <div class="label">{{ news.label }}</div>
-        <h4 class="title">{{ news.title }}</h4>
-        <RouterLink :to="news.url">
-          <i class="fa-solid fa-right-long"></i>
-        </RouterLink>
-      </div>
-      <div class="btn_block">
-        <PortalButton content="所有消息" type="kotanuki_park_all_news" routingLink="#" />
-      </div>
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61554073542224&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+        width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 div.news_container {
-  width: 100%;
-  height: 100vh;
   position: relative;
-  @include flex_vm();
-
+  padding: 10vh 0;
 }
 
-div.title_block {
-  position: absolute;
-  left: 25vw;
-  top: 10vh;
+div.title_wrap{
+  position: relative;
+  left: 15vw;
 }
 
-div.label_wrap {
-  display: flex;
-  gap: 1vw;
-  align-self: start;
+div.whole_section {
+  @include flex_hm();
+  gap: 3vw;
+}
 
-  div.label {
-    background-color: $kotanukiParkPrimary;
-    color: white;
-    @include tagEffect();
-  }
+div.left_section {
+  @include flex_vm_ae();
+  gap: 2vh;
 }
 
 div.news_wrap {
-  @include flex_vm();
-  gap: 2vh;
-  margin-top: 20vh;
+  @include flex_hm_ae();
+  gap: 2vw;
 
   div.news {
-    width: 45vw;
-    padding: 1vw;
-    @include flex_hm_js();
-    gap: 2vw;
-    border-bottom: 0.1vw solid $kotanukiParkPrimary;
+    width: 18vw;
+    height: 60vh;
+    @include flex_vm_js();
+    box-shadow: 0.2vw 0.2vw 0.5vw grey;
+    border-radius: $br_PC;
 
-    span.date {
-      width: 10%;
-      color: $kotanukiParkPrimary;
-      font-weight: $fwBold;
+    div.img_wrap {
+      @include flex_hm();
+      width: 18vw;
+      height: 30vh;
+      border-radius: $br_PC $br_PC 0 0;
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        filter: brightness(120%);
+        object-fit: cover;
+      }
     }
 
-    div.label {
-      width: 15%;
-      border: 0.2vw solid $kotanukiParkPrimary;
-      color: $kotanukiParkPrimary;
-    }
+    div.text_wrap {
+      padding: 1vh 1vw;
+      @include flex_vm_as();
+      gap: 2vh;
 
-    h4.title {
-      width: 60%;
+      div.date_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        span.date {
+          font-weight: $fwBold;
+          display: block;
+          font-size: 1.2vw;
+          color: $rdaPrimary;
+        }
+      }
+
+      div.content_wrap {
+
+        h3.title {
+          font-size: 1.2vw;
+          font-weight: $fwBold;
+          height: 10vh;
+        }
+
+        p {
+          text-overflow: ellipsis;
+          line-height: 1.5;
+        }
+      }
+
+      div.btn_block {
+        align-self: flex-end;
+      }
     }
   }
-
-  i {
-    color: $kotanukiParkPrimary;
-    font-size: 1.5vw;
-
-    @include goToEffect($kotanukiParkSecondary)
-  }
 }
 
-div.label {
-  box-sizing: border-box;
-  @include flex_hm();
-  width: 8vw;
-  height: 5vh;
-  border-radius: $br_PC;
-}
 
-div.btn_block {
-  justify-content: end;
-}
 </style>

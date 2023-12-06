@@ -153,4 +153,4 @@ div.flower_wrap {
     }
   }
 }
-</style>@/utils/assets-url
+</style>

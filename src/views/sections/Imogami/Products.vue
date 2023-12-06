@@ -169,4 +169,4 @@ div.products_wrap {
 div.btn_block {
   @include flex_hm();
 }
-</style>@/utils/assets-url
+</style>

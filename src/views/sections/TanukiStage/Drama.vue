@@ -137,4 +137,4 @@ img.bottom {
   right: 0;
   bottom: -15vh;
 }
-</style>@/utils/assets-url
+</style>

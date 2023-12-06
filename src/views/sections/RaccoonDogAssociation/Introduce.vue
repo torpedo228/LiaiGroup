@@ -24,6 +24,7 @@ div.introduce_container {
   background-image: url('@/assets/images/RaccoonDogAssociation/introduce/introduce_01.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0 -10vh;
   @include flex_hm();
 }
 

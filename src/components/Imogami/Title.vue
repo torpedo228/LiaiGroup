@@ -67,4 +67,4 @@ img {
 .white {
   color: white;
 }
-</style>@/utils/assets-url
+</style>
