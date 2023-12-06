@@ -92,11 +92,11 @@ div.donate {
 }
 
 div.shadow {
+  position: fixed;
   width: 13vw;
   height: 16vh;
   background-color: $rdaSecondary;
   border-radius: 0 0 $br_PC $br_PC;
-  position: absolute;
   z-index: 998;
   top: 0;
   right: 2.5vw;
