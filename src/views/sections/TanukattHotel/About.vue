@@ -17,7 +17,7 @@ import Title from '@/components/TanukattHotel/Title.vue';
         </p>
         <div class="sign_block">
           <span>狸愛集團創辦人</span>
-          <img class="signature" src="@/assets/images/TanukattHotel/about/signature.png" alt="signature">
+          <a href="https://www.buymeacoffee.com/tanuki.jr"><img class="signature" src="@/assets/images/TanukattHotel/about/signature.png" alt="signature"></a>
         </div>
       </div>
     </div>
@@ -55,6 +55,7 @@ div.content_wrap {
 
 div.sign_block {
   margin-left: auto;
+
   span {
     font-size: 1.5vw;
   }

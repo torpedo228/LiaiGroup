@@ -19,7 +19,7 @@ div.rooms_container {
   height: 100vh;
   @include flex_vm();
   gap: 3vw;
-  padding: 10vh;
+  padding: 10vh 0;
 }
 
 
