@@ -82,6 +82,8 @@ div.donate_wrap {
     border-radius: $br_PC;
     background-color: white;
 
+
+
     &:hover {
       background-color: $rdaPrimary;
 
@@ -89,6 +91,8 @@ div.donate_wrap {
         transform: scale(1.1);
         transition: 0.2s;
       }
+
+
 
       h3 {
         color: white;
@@ -114,6 +118,12 @@ div.donate_wrap {
       }
     }
   }
+
+  div.donateMethod:first-child {
+      img {
+        filter: brightness(120%);
+      }
+    }
 
   div.donateMethod:last-child {
     width: 20vw;
@@ -146,4 +156,5 @@ img.help {
   right: -10vw;
   top: 0;
   width: 62vw;
-}</style>
+}
+</style>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import Header from '@/layouts/TanukattHotel/Header.vue';
+import BookRoom from '@/layouts/TanukattHotel/BookRoom.vue';
+import ReserveRestaurant from '@/layouts/TanukattHotel/ReserveRestaurant.vue';
 import Hero from '@/views/sections/TanukattHotel/Hero.vue';
 import About from '@/views/sections/TanukattHotel/About.vue';
 import Rooms from '@/views/sections/TanukattHotel/Rooms.vue';
@@ -12,6 +14,8 @@ import Footer from '@/layouts/TanukattHotel/Footer.vue';
 <template>
   <div class="tanukatt_hotel_section_container">
     <Header />
+    <BookRoom />
+    <ReserveRestaurant />
     <Hero />
     <About />
     <Rooms />
@@ -24,6 +28,7 @@ import Footer from '@/layouts/TanukattHotel/Footer.vue';
 
 <style scoped lang="scss">
 div.tanukatt_hotel_section_container {
-  font-family: $kotanukiFont;
+  font-family: $regularFont;
+  overflow-x: hidden;
 }
 </style>

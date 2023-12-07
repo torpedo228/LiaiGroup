@@ -11,10 +11,10 @@ onUnmounted(() => {
 const scrollToDarkBg = ref(true);
 const showUnlock = ref(false);
 
-let news = document.getElementById('news');
-let introduce = document.getElementById('introduce');
-let actions = document.getElementById('actions');
-let help = document.getElementById('help');
+// let news = document.getElementById('news');
+// let introduce = document.getElementById('introduce');
+// let actions = document.getElementById('actions');
+// let help = document.getElementById('help');
 
 function whenScroll() {
   if (window.scrollY >= 700 && window.scrollY < 1400 || window.scrollY >= 1900) {
