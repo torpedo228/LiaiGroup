@@ -1,4 +1,31 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const choosePeopleAndRoom = ref(false);
+const adults = ref(0);
+const kids = ref(0);
+const rooms = ref(0);
+
+function toggleChooseBox() {
+  choosePeopleAndRoom.value = !choosePeopleAndRoom.value;
+}
+
+function plusOne(i: any) {
+  i.value += 1;
+}
+
+function minusOne(i: any) {
+  if (i.value > 0) {
+    i.value -= 1;
+  }
+
+}
+
+function closeBoxAndRecordOnInput() {
+  choosePeopleAndRoom.value = false;
+}
+
+
 
 </script>
 
@@ -10,29 +37,41 @@
       </p>
 
       <div class="input_wrap">
-        <input type="date" name="" id="">
-        <input type="date" name="" id="">
-        <div class="count_and_rooms">
-          <i class="fa-solid fa-user"></i>1位成人 2位孩童 1間客房
+        <input class="input" type="text" name="check_in" id="check_in" placeholder="&#xf133  入住日期"
+          style="font-family:FontAwesome" onfocus="(this.type='date')">
+        <input class="input" type="text" name="check_in" id="check_out" placeholder="&#xf133  退房日期"
+          style="font-family:FontAwesome" onfocus="(this.type='date')">
+        <div class="count_and_rooms_wrap">
+          <div class="count_and_rooms" @click="toggleChooseBox">
+            <i class="fa-solid fa-user"></i>{{ adults }}位成人·{{ kids }}位孩童·{{ rooms }}間客房<i
+              class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="count_and_rooms_choose" v-if="choosePeopleAndRoom">
+            <div class="wrap people">
+              <p class="label">成人</p>
+              <div class="count"><i class="fa-solid fa-plus" @click="plusOne(adults)"></i><span>{{ adults }}</span><i
+                  class="fa-solid fa-minus" @click="minusOne(adults)"></i>
+              </div>
+            </div>
+            <div class="wrap people">
+              <p class="label">小孩</p>
+              <div class="count"><i class="fa-solid fa-plus" @click="plusOne(kids)"></i><span>{{ kids }}</span><i
+                  class="fa-solid fa-minus" @click="minusOne(kids)"></i></div>
+            </div>
+            <div class="wrap rooms">
+              <p class="label">客房</p>
+              <div class="count"><i class="fa-solid fa-plus" @click="plusOne(rooms)"></i><span>{{ rooms }}</span><i
+                  class="fa-solid fa-minus" @click="minusOne(rooms)"></i></div>
+            </div>
+            <button class="finish" @click="closeBoxAndRecordOnInput">完成<i class="fa-solid fa-check"></i></button>
+          </div>
         </div>
         <button class="search">搜尋空房<i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
-      <div class="count_and_rooms_wrap">
-        <div class="wrap people">
-          <p class="label">成人</p>
-          <div class="count"><i class="fa-solid fa-plus"></i><span>1</span><i class="fa-solid fa-minus"></i></div>
-        </div>
-        <div class="wrap people">
-          <p class="label">小孩</p>
-          <div class="count"><i class="fa-solid fa-plus"></i><span>1</span><i class="fa-solid fa-minus"></i></div>
-        </div>
-        <div class="wrap rooms">
-          <p class="label">客房</p>
-          <div class="count"><i class="fa-solid fa-plus"></i><span>1</span><i class="fa-solid fa-minus"></i></div>
-        </div>
-        <button class="search">完成<i class="fa-solid fa-check"></i></button>
 
-      </div>
+
+
+
     </div>
 
     <img class="hero_img" src="@/assets/images/TanukattHotel/hero/hero_img.png" alt="hero_img">
@@ -56,9 +95,9 @@ div.hero_container {
 }
 
 div.content_wrap {
-  border: 1px solid red;
-  width: 100vw;
-  @include flex_vm();
+  margin-bottom: 10vh;
+  @include flex_vm_js();
+  gap: 3vh;
   position: absolute;
 
   img.logo_footer {
@@ -72,24 +111,110 @@ div.content_wrap {
   }
 
   div.input_wrap {
-    @include flex_hm();
+    @include flex_hm_as();
+    gap: 1vw;
     border: 1px solid red;
-    width: 50vw;
 
-    div.count_and_rooms_wrap {
-      width: 20vw;
-      height: 20vh;
+
+    input,
+    .count_and_rooms,
+    .search {
+      border: none;
+      height: 6vh;
       background-color: white;
       border-radius: $br_PC;
-      position: absolute;
+      cursor: pointer;
+    }
 
-      div.wrap {
+    input {
+      width: 10vw;
+      padding: 1vh 1vw 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input::placeholder {
+      font-size: 1.2vw;
+      color: $tanukattHotelPrimary;
+    }
+
+    .count_and_rooms {
+      @include flex_hm();
+      gap: 0.5vw;
+      width: 18vw;
+
+      i {
+        color: $tanukattHotelPrimary;
         @include flex_hm();
+      }
+    }
+
+    .search {
+      @include tagEffect();
+      @include flex_hm();
+      font-size: 1.1vw;
+      gap: 0.5vw;
+      width: 8vw;
+      color: white;
+      background-color: $tanukattHotelPrimary;
+    }
+
+  }
+
+  div.count_and_rooms_wrap {
+
+    position: relative;
+  }
+
+  div.count_and_rooms_choose {
+    width: 18vw;
+    height: 28vh;
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: $br_PC;
+    position: absolute;
+    @include flex_vm();
+    gap: 1.5vh;
+
+    div.wrap {
+      @include flex_hm();
+      gap: 5vw;
+      font-size: 1.2vw;
+
+      div.count {
+        @include flex_hm();
+        gap: 1vw;
+      }
+
+      i {
+        @include tagEffect();
+        @include flex_hm();
+        width: 1.5vw;
+        height: 1.5vw;
+        color: white;
+        background-color: $tanukattHotelPrimary;
+        border-radius: $circle;
       }
     }
   }
 
-
+  .finish {
+    @include tagEffect();
+    @include flex_hm();
+    font-size: 1.1vw;
+    gap: 0.5vw;
+    width: 12vw;
+    color: white;
+    background-color: $tanukattHotelSecondary;
+    border: none;
+    height: 6vh;
+    border-radius: $br_PC;
+    cursor: pointer;
+  }
 
 }
 </style>
