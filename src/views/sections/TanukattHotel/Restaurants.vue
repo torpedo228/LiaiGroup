@@ -2,10 +2,9 @@
 import Title from '@/components/TanukattHotel/Title.vue';
 import { getImageUrl } from '@/utils/assets-url'
 import { ref } from 'vue'
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 
 const currentRestaurantIndex = ref(0);
+
 const restaurantList = [
   {
     name: '狸享高空餐酒館',
@@ -25,17 +24,35 @@ const restaurantList = [
   }
 ]
 
-const settings = {
-  "dots": true,
-  "infinite": true,
-  "slidesToShow": 3,
-  "slidesToScroll": 1,
-  "vertical": true,
-  "verticalSwiping": true
+setInterval(() => loopRestaurantList(), 2000)
+
+function loopRestaurantList() {
+  if (currentRestaurantIndex.value == restaurantList.length - 1) {
+    currentRestaurantIndex.value = 0;
+  } else {
+    currentRestaurantIndex.value++
+  }
 }
 
 function switchRestaurant(i: any) {
   currentRestaurantIndex.value = i;
+}
+function switchUp() {
+  if (currentRestaurantIndex.value == 0) {
+    currentRestaurantIndex.value = restaurantList.length - 1;
+  } else {
+    currentRestaurantIndex.value--;
+  }
+}
+
+function switchDown() {
+  if (currentRestaurantIndex.value == restaurantList.length - 1) {
+    currentRestaurantIndex.value = 0;
+  } else {
+    currentRestaurantIndex.value++;
+  }
+
+  console.log(currentRestaurantIndex.value)
 }
 </script>
 
@@ -45,25 +62,20 @@ function switchRestaurant(i: any) {
     <p class="slogan">狸悅酒店攜手米其林摘星主廚，結合美式風的極致餐飲體驗，各式主題餐廳提供日夜不間斷的美食饗宴。</p>
 
     <div class="restaurant_wrap">
-      <div class="carousel">
+      <div class="left_name_section">
+        <i class="fa-solid fa-caret-up" @click='switchUp'></i>
+        <p v-for="(restaurant, i) in restaurantList" :key="restaurant.name" class="name"
+          :class="{ 'focus': currentRestaurantIndex === i }" @click="switchRestaurant(i)">
+          {{ restaurant.name }}
+        <div class="hl"></div>
+        </p>
 
-        <!-- <VueSlickCarousel :arrows="true" :dots="true">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-        </VueSlickCarousel> -->
-        <!-- <VueSlickCarousel v-bind="settings" :style="{ height: '372px' }">
-          <div v-for="(restaurant, i) in restaurantList" :key="restaurant.name">{{ restaurant.name }}
-          </div>
-
-        </VueSlickCarousel> -->
+        <i class="fa-solid fa-caret-down" @click="switchDown"></i>
       </div>
       <div class="restaurant">
         <img :src="getImageUrl(restaurantList[currentRestaurantIndex].imgSrc as string)" alt="">
       </div>
     </div>
-
   </div>
 </template>
 
@@ -88,12 +100,55 @@ div.restaurant_wrap {
   background-color: white;
   display: flex;
   justify-content: space-between;
+  border-radius: $br_PC;
 
-  div.carousel {}
+  div.left_name_section {
+    width: 20vw;
+    @include flex_vm();
+
+    p.name {
+      cursor: pointer;
+      font-size: 1.2vw;
+      @include flex_vm();
+      color: $textColor;
+
+      &:hover {
+        color: $tanukattHotelSecondary
+      }
+
+      &:active {
+        color: $tanukattHotelSecondary
+      }
+
+      div.hl {
+        margin: 2vh 0;
+        width: 8vw;
+        height: 0.1vh;
+        background-color: $textColor;
+      }
+    }
+
+    p.name:last-of-type {
+      div.hl {
+        display: none;
+      }
+    }
+
+    i {
+      @include tagEffect();
+      margin: 2vh;
+      color: $tanukattHotelPrimary;
+      font-size: 2vw;
+    }
+
+
+  }
 
 
   div.restaurant {
     height: 100%;
+    border-radius: 0 $br_PC $br_PC 0;
+    overflow: hidden;
 
     img {
       width: 50vw;
@@ -102,5 +157,10 @@ div.restaurant_wrap {
       margin-left: auto;
     }
   }
+}
+
+.focus {
+  font-weight: $fwBold;
+  color: $tanukattHotelSecondary;
 }
 </style>

@@ -86,7 +86,7 @@ div.side_menu {
   position: absolute;
   top: 10vh;
   right: 0;
-  width: 25vw;
+  width: 28vw;
   height: 90vh;
   background-color: white;
   box-shadow: -5px 0px 5px -3px #616161;
