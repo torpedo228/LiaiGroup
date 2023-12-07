@@ -1,26 +1,34 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const choosePeopleAndRoom = ref(false);
-const adults = ref(0);
-const kids = ref(0);
-const rooms = ref(0);
+
+enum ORDER_ITEM {
+  ADULTS,
+  KIDS,
+  ROOMS
+}
+
+let arr = new Array(Object.keys(ORDER_ITEM).length);
+arr.fill(0)
+
+const countOfOrderItem = reactive(
+  arr
+)
+
+function plusOne(item: ORDER_ITEM) {
+  countOfOrderItem[item] += 1;
+}
+
+function minusOne(item: ORDER_ITEM) {
+  if (countOfOrderItem[item] > 0) {
+    countOfOrderItem[item] -= 1;
+  }
+}
 
 function toggleChooseBox() {
   choosePeopleAndRoom.value = !choosePeopleAndRoom.value;
 }
-
-function plusOne(i: any) {
-  i.value += 1;
-}
-
-function minusOne(i: any) {
-  if (i.value > 0) {
-    i.value -= 1;
-  }
-
-}
-
 function closeBoxAndRecordOnInput() {
   choosePeopleAndRoom.value = false;
 }
@@ -43,25 +51,29 @@ function closeBoxAndRecordOnInput() {
           style="font-family:FontAwesome" onfocus="(this.type='date')">
         <div class="count_and_rooms_wrap">
           <div class="count_and_rooms" @click="toggleChooseBox">
-            <i class="fa-solid fa-user"></i>{{ adults }}位成人·{{ kids }}位孩童·{{ rooms }}間客房<i
+            <i
+              class="fa-solid fa-user"></i>{{ countOfOrderItem[ORDER_ITEM.ADULTS] }}位成人·{{ countOfOrderItem[ORDER_ITEM.KIDS] }}位孩童·{{ countOfOrderItem[ORDER_ITEM.ROOMS] }}間客房<i
               class="fa-solid fa-angle-down"></i>
           </div>
           <div class="count_and_rooms_choose" v-if="choosePeopleAndRoom">
             <div class="wrap people">
               <p class="label">成人</p>
-              <div class="count"><i class="fa-solid fa-plus" @click="plusOne(adults)"></i><span>{{ adults }}</span><i
-                  class="fa-solid fa-minus" @click="minusOne(adults)"></i>
+              <div class="count"><i class="fa-solid fa-plus"
+                  @click="plusOne(ORDER_ITEM.ADULTS)"></i><span>{{ countOfOrderItem[ORDER_ITEM.ADULTS] }}</span><i
+                  class="fa-solid fa-minus" @click="minusOne(ORDER_ITEM.ADULTS)"></i>
               </div>
             </div>
             <div class="wrap people">
               <p class="label">小孩</p>
-              <div class="count"><i class="fa-solid fa-plus" @click="plusOne(kids)"></i><span>{{ kids }}</span><i
-                  class="fa-solid fa-minus" @click="minusOne(kids)"></i></div>
+              <div class="count"><i class="fa-solid fa-plus"
+                  @click="plusOne(ORDER_ITEM.KIDS)"></i><span>{{ countOfOrderItem[ORDER_ITEM.KIDS] }}</span><i
+                  class="fa-solid fa-minus" @click="minusOne(ORDER_ITEM.KIDS)"></i></div>
             </div>
             <div class="wrap rooms">
               <p class="label">客房</p>
-              <div class="count"><i class="fa-solid fa-plus" @click="plusOne(rooms)"></i><span>{{ rooms }}</span><i
-                  class="fa-solid fa-minus" @click="minusOne(rooms)"></i></div>
+              <div class="count"><i class="fa-solid fa-plus"
+                  @click="plusOne(ORDER_ITEM.ROOMS)"></i><span>{{ countOfOrderItem[ORDER_ITEM.ROOMS] }}</span><i
+                  class="fa-solid fa-minus" @click="minusOne(ORDER_ITEM.ROOMS)"></i></div>
             </div>
             <button class="finish" @click="closeBoxAndRecordOnInput">完成<i class="fa-solid fa-check"></i></button>
           </div>
@@ -113,8 +125,6 @@ div.content_wrap {
   div.input_wrap {
     @include flex_hm_as();
     gap: 1vw;
-    border: 1px solid red;
-
 
     input,
     .count_and_rooms,
@@ -166,7 +176,6 @@ div.content_wrap {
   }
 
   div.count_and_rooms_wrap {
-
     position: relative;
   }
 
@@ -178,7 +187,7 @@ div.content_wrap {
     border-radius: $br_PC;
     position: absolute;
     @include flex_vm();
-    gap: 1.5vh;
+    gap: 2vh;
 
     div.wrap {
       @include flex_hm();
