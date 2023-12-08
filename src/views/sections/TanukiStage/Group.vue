@@ -56,7 +56,7 @@ function switchRole(i: any) {
       <div class="focus_wrap">
         <img class="show" :src="getImageUrl(roleList[currentRoleIndex].imgSrc as string)"
           :alt="roleList[currentRoleIndex].roleName">
-        <img src="@/assets/images/TanukiStage/group/background_deco.svg" alt="background_deco">
+        <img class="background_deco" src="@/assets/images/TanukiStage/group/background_deco.svg" alt="background_deco">
       </div>
 
       <div class="role_container">
@@ -96,6 +96,7 @@ div.group_container {
   width: 80%;
   margin-left: auto;
   position: relative;
+  padding-bottom: 5vh;
 }
 
 div.introduce {
@@ -103,25 +104,28 @@ div.introduce {
   width: 70vw;
   height: 60vh;
   display: flex;
-  gap: 3vw;
+
 
   div.focus_wrap {
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 40%;
+    height: 80%;
     @include flex_hm();
 
     img.show {
-      width: 100%;
-      width: 20vw;
+      width: 80%;
       position: absolute;
       display: block;
-      right: 0;
+
+    }
+
+    img.background_deco {
+      width: 100%;
     }
   }
 
   div.role_container {
-    width: 80%;
+    width: 60%;
     @include flex_vm_js();
     gap: 5vh;
 

@@ -12,7 +12,10 @@ function toggleBgm() {
     audio.pause();
   }
 }
-
+audio.addEventListener('ended', function () {
+  this.currentTime = 0;
+  this.play();
+}, false);
 
 </script>
 

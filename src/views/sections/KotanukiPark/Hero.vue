@@ -1,12 +1,13 @@
 <script setup lang="ts">
-
+let date = new Date();
+const day_list = ['日', '一', '二', '三', '四', '五', '六'];
 </script>
 
 <template>
   <div class="hero_container">
     <div class="today_info">
       <div class="regular">
-        <h3>11月26日(日) 開園情報</h3>
+        <h3>{{ date.getMonth() + 1 }}月{{ date.getDate() }}日({{ day_list[date.getDay()] }}) 開園情報</h3>
         <div class="span_wrap">
           <span>全園區</span><span>9:30~21:00</span>
         </div>

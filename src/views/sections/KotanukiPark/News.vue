@@ -82,6 +82,7 @@ div.label_wrap {
   display: flex;
   gap: 1vw;
   align-self: start;
+  font-size: 1vw;
 
   div.label {
     background-color: $kotanukiParkPrimary;
@@ -96,6 +97,7 @@ div.news_wrap {
   margin-top: 20vh;
 
   div.news {
+    font-size: 1vw;
     width: 45vw;
     padding: 1vw;
     @include flex_hm_js();

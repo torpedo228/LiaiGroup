@@ -17,7 +17,7 @@ const showUnlock = ref(false);
 // let help = document.getElementById('help');
 
 function whenScroll() {
-  if (window.scrollY >= 700 && window.scrollY < 1400 || window.scrollY >= 1900) {
+  if (window.scrollY >= 900 && window.scrollY < 2000 || window.scrollY >= 2900) {
     scrollToDarkBg.value = false
     showUnlock.value = true;
   } else {
