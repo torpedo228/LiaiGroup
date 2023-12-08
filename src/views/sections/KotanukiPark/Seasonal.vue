@@ -57,7 +57,7 @@ const flowerList = [
     <div class="flower_wrap">
       <div class="flower" v-for="flower in  flowerList " :key="flower.title">
         <div class="img_block">
-          <img :src="getImageUrl(flower.imgSrc as string)" alt="">
+          <img :src="getImageUrl(flower.imgSrc as string)" :alt="flower.title">
         </div>
         <div class="content_wrap">
           <h4 class="title">{{ flower.title }}</h4>

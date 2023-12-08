@@ -37,7 +37,7 @@ const newsList = [
     <div class="news_wrap">
       <div class="news" v-for="news in  newsList " :key="news.title">
         <div class="img_wrap">
-          <img :src="getImageUrl(news.imgSrc as string)" alt="">
+          <img :src="getImageUrl(news.imgSrc as string)" :alt="news.title">
         </div>
         <div class="text_wrap">
           <div class="date_and_tag_wrap">
@@ -82,7 +82,7 @@ div.news_wrap {
   div.news {
     width: 60vw;
     border-bottom: 3px solid white;
- 
+
     @include flex_hm_as();
     gap: 2vw;
     padding-bottom: 1vh;

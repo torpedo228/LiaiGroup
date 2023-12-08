@@ -16,7 +16,7 @@ import Title from '@/components/TanukattHotel/Title.vue';
         referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="methods">
         <h4>自行開車</h4>
-        <p>國道一號於狸愛端出口下狸愛交流道 → 直走右轉地瓜路一段(車程約20分鐘) → 左轉小狸路一段 → 右轉幸福路一段 → 右側即抵達
+        <p>狸道一號於狸愛端出口下狸愛交流道 → 直走右轉地瓜路一段(車程約20分鐘) → 左轉小狸路一段 → 右轉幸福路一段 → 右側即抵達
         </p>
         <br>
         <h4>搭乘大眾運輸(飛機、接駁車)</h4>

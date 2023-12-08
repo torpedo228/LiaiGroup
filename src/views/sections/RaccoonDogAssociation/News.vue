@@ -38,7 +38,7 @@ const newsList = [
         <div class="news_wrap">
           <div class="news" v-for="news in newsList" :key="news.title">
             <div class="img_wrap">
-              <img :src="getImageUrl(news.imgSrc as string)" alt="">
+              <img :src="getImageUrl(news.imgSrc as string)" :alt="news.title">
             </div>
             <div class="text_wrap">
               <div class="date_wrap">

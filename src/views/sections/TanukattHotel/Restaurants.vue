@@ -73,7 +73,7 @@ function switchDown() {
         <i class="fa-solid fa-caret-down" @click="switchDown"></i>
       </div>
       <div class="restaurant">
-        <img :src="getImageUrl(restaurantList[currentRestaurantIndex].imgSrc as string)" alt="">
+        <img :src="getImageUrl(restaurantList[currentRestaurantIndex].imgSrc as string)" :alt="restaurantList[currentRestaurantIndex].name">
       </div>
     </div>
   </div>

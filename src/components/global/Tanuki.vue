@@ -16,7 +16,7 @@ function PlayChu() {
 
 <template>
   <div class="tanuki_conatiner" @mousedown="PlayChu">
-    <img id="tanurus" src="@/assets/images/tanuki.png" alt="">
+    <img id="tanurus" src="@/assets/images/tanuki.png" alt="狸貓機型貓嘴">
     <h1 id="title">狸貓病毒!!</h1>
     <div class="escape" @click="$router.go(-1)">
       交出地瓜然後逃掉🍠

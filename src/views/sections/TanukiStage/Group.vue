@@ -50,13 +50,13 @@ function switchRole(i: any) {
 <template>
   <div class="group_container" id="group">
     <div class="title_block">
-      <img src="@/assets/images/TanukiStage/title/title_group.svg" alt="">
+      <img src="@/assets/images/TanukiStage/title/title_group.svg" alt="title_group">
     </div>
     <div class="introduce" data-aos="flip-left">
       <div class="focus_wrap">
         <img class="show" :src="getImageUrl(roleList[currentRoleIndex].imgSrc as string)"
           :alt="roleList[currentRoleIndex].roleName">
-        <img src="@/assets/images/TanukiStage/group/background_deco.svg" alt="">
+        <img src="@/assets/images/TanukiStage/group/background_deco.svg" alt="background_deco">
       </div>
 
       <div class="role_container">
@@ -86,7 +86,7 @@ function switchRole(i: any) {
       </div>
     </div>
 
-    <img data-aos="slide-left" class="deco" src="@/assets/images/TanukiStage/deco.svg" alt="">
+    <img data-aos="slide-left" class="deco" src="@/assets/images/TanukiStage/deco.svg" alt="deco">
 
   </div>
 </template>

@@ -22,6 +22,8 @@ enum TYPE {
   rda_more_news = "rda_action_btn_color",
   rda_intro = "rda_intro_btn_color",
   rda_action = "rda_action_btn_color",
+  tanukatt_room_detail = "tanukatt_room_detail_btn_color",
+  tanukatt_book_now = "tanukatt_book_now_btn_color",
   tanukatt_watch_more = "tanukatt_watch_more_btn_color",
 }
 
@@ -171,6 +173,7 @@ i {
   border: 1px solid $rdaSecondary;
   @include btnEffect($rdaPrimary, $white, $rdaPrimary);
 }
+
 .rda_intro_btn_color {
   background-color: $rdaSecondary;
   color: $white;
@@ -184,12 +187,23 @@ i {
   border: 1px solid $rdaPrimary;
   @include btnEffect($rdaSecondary, $white, $rdaSecondary);
 }
+
+.tanukatt_room_detail_btn_color {
+  background-color: $tanukattHotelSecondary;
+  color: $white;
+  border: 1px solid $tanukattHotelSecondary;
+  @include btnEffect($tanukattHotelDeco, $white, $tanukattHotelDeco);
+}
+.tanukatt_book_now_btn_color {
+  background-color: $tanukattHotelPrimary;
+  color: $white;
+  border: 1px solid $tanukattHotelPrimary;
+  @include btnEffect($tanukattHotelLightBlue, $white, $tanukattHotelLightBlue);
+}
 .tanukatt_watch_more_btn_color {
   background-color: $tanukattHotelPrimary;
   color: $white;
   border: 1px solid $tanukattHotelPrimary;
   @include btnEffect($tanukattHotelSecondary, $white, $tanukattHotelSecondary);
 }
-
-
 </style>
