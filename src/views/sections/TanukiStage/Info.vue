@@ -83,7 +83,6 @@ div.drama_container {
 
   div.content_wrap {
     position: relative;
-    z-index: 10;
     @include flex_vm_as();
     gap: 3vh;
     height: 50vh;
@@ -98,8 +97,7 @@ div.drama_container {
       @include flex_vm_as();
       gap: 2vh;
       position: relative;
-      z-index: 10;
-
+      z-index: 1;
 
       div {
         @include flex_hm();
