@@ -8,11 +8,11 @@ import { getImageUrl } from '@/utils/assets-url'
 const facilityList = [
   {
     name: '熱帶風游泳池',
-    imgSrc: 'TanukattHotel/facility/facility_01.svg'
+    imgSrc: 'TanukattHotel/facility/facility_01.png'
   },
   {
     name: '觀景SPA露臺',
-    imgSrc: 'TanukattHotel/facility/facility_02.svg'
+    imgSrc: 'TanukattHotel/facility/facility_02.png'
   },
   {
     name: '六角露天池',

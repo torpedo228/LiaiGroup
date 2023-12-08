@@ -8,42 +8,42 @@ const flowerList = [
     status: "滿開綻放中",
     location: "小狸花園廣場",
     date: "2023/12/2",
-    imgSrc: "KotanukiPark/seasonal/flower_1.svg"
+    imgSrc: "KotanukiPark/seasonal/flower_1.png"
   },
   {
     title: "霸王菊花",
     status: "滿開綻放中",
     location: "幸福走廊",
     date: "2023/12/2",
-    imgSrc: "KotanukiPark/seasonal/flower_2.svg"
+    imgSrc: "KotanukiPark/seasonal/flower_2.png"
   },
   {
     title: "極!繡球",
     status: "滿開綻放中",
     location: "小狸花園廣場",
     date: "2023/12/2",
-    imgSrc: "KotanukiPark/seasonal/flower_3.svg"
+    imgSrc: "KotanukiPark/seasonal/flower_3.png"
   },
   {
     title: "霸王菊花",
     status: "滿開綻放中",
     location: "幸福走廊",
     date: "2023/12/2",
-    imgSrc: "KotanukiPark/seasonal/flower_2.svg"
+    imgSrc: "KotanukiPark/seasonal/flower_2.png"
   },
   {
     title: "極!繡球",
     status: "滿開綻放中",
     location: "小狸花園廣場",
     date: "2023/12/2",
-    imgSrc: "KotanukiPark/seasonal/flower_3.svg"
+    imgSrc: "KotanukiPark/seasonal/flower_3.png"
   },
   {
     title: "超級波斯",
     status: "滿開綻放中",
     location: "幸福走廊",
     date: "2023/12/2",
-    imgSrc: "KotanukiPark/seasonal/flower_1.svg"
+    imgSrc: "KotanukiPark/seasonal/flower_1.png"
   }
 ]
 </script>

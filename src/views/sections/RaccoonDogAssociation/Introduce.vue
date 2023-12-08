@@ -21,7 +21,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
 div.introduce_container {
   width: 100%;
   height: 80vh;
-  background-image: url('@/assets/images/RaccoonDogAssociation/introduce/introduce_01.png');
+  background-image: url('@/assets/images/RaccoonDogAssociation/introduce/introduce.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -10vh;
