@@ -49,8 +49,7 @@ div.brand_block_container {
   align-items: center;
   justify-content: space-between;
   padding-bottom: 3vh;
-
-  @include boxShadow_PC()
+  box-shadow: 0.1vw 0.1vw 0.3vw grey;
 }
 
 div.img_container {
