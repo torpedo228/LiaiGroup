@@ -27,7 +27,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
       <img class="tickets_deco" src="@/assets/images/TanukiStage/info/tickets_deco.svg" alt="tickets_deco">
     </div>
 
-    <div data-aos="slide-down" data-aos-anchor-placement="#info" class="item invite">
+    <div data-aos="slide-down" data-aos-anchor-placement="#info" data-aos-mirror="false" class="item invite">
       <div class="title_block">
         <img src="@/assets/images/TanukiStage/title/title_invite.svg" alt="title_invite">
       </div>
@@ -97,6 +97,8 @@ div.drama_container {
     div.option_wrap {
       @include flex_vm_as();
       gap: 2vh;
+      position: relative;
+      z-index: 10;
 
 
       div {
@@ -123,8 +125,7 @@ div.drama_container {
     width: 18vw;
     bottom: 4vh;
     right: 5vw;
-    opacity: 0.5;
-    z-index: 20;
+    opacity: 0.7;
   }
 
   img.tickets_deco {

@@ -67,7 +67,7 @@ div.news_container {
   padding: 10vh 0;
 }
 
-div.title_wrap{
+div.title_wrap {
   position: relative;
   left: 15vw;
 }
@@ -145,6 +145,4 @@ div.news_wrap {
     }
   }
 }
-
-
 </style>

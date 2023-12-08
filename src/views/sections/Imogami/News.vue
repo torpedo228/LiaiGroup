@@ -96,7 +96,7 @@ div.news_wrap {
       border-radius: $br_PC;
       overflow: hidden;
       border: 0.6vw solid $white;
-      background-color: $imogamiSecondary;
+      background-color: $white;
 
       img {
         width: 100%;
@@ -125,7 +125,7 @@ div.news_wrap {
         div.tag {
           @include flex_hm();
           padding: 0 0.5vw;
-
+          font-size: 1vw;
           border-radius: $br_tag_PC;
           background-color: $imogamiSecondary;
           color: $imogamiPrimary;

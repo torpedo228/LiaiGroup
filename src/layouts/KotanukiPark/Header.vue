@@ -159,7 +159,9 @@ div.input_wrap {
     height: 5vh;
     border-radius: $br_PC;
     padding-left: 2.8vw;
+    font-size: 1.1vw;
   }
+
 
   i {
     font-size: 1.3vw;

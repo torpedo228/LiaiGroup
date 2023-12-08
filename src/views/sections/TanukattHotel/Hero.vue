@@ -177,6 +177,7 @@ div.content_wrap {
 
   div.count_and_rooms_wrap {
     position: relative;
+    font-size: 1vw;
   }
 
   div.count_and_rooms_choose {

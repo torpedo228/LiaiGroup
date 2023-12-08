@@ -94,6 +94,7 @@ div.content_wrap {
     @include flex_hm();
     gap: 2vw;
     margin-bottom: 5vh;
+    font-size: 1vw;
 
     div.label {
       @include tagEffect();
