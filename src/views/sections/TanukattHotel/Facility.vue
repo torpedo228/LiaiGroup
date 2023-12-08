@@ -38,7 +38,7 @@ const facilityList = [
         <Slide v-for="facility in facilityList" :key="facility.name">
           <div class="carousel__item">
             <p>{{ facility.name }}</p>
-            <img :src="getImageUrl(facility.imgSrc as string)" alt="">
+            <img :src="getImageUrl(facility.imgSrc as string)" :alt="facility.name">
           </div>
         </Slide>
 

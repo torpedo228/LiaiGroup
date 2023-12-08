@@ -7,7 +7,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
 
     <div data-aos="slide-right" class="item tickets">
       <div class="title_block">
-        <img class="big" src="@/assets/images/TanukiStage/title/title_tickets.svg" alt="">
+        <img class="big" src="@/assets/images/TanukiStage/title/title_tickets.svg" alt="title_tickets">
       </div>
       <div class="content_wrap">
         <p>我們提供多種購票方式，方便您自由選擇！</p>
@@ -22,14 +22,14 @@ import PortalButton from '@/components/global/PortalButton.vue';
         </div>
       </div>
       <a href="https://www.buymeacoffee.com/tanuki.jr">
-        <img class="buy_tickets" src="@/assets/images/TanukiStage/info/buy_tickets.png" alt="">
+        <img class="buy_tickets" src="@/assets/images/TanukiStage/info/buy_tickets.png" alt="buy_tickets">
       </a>
-      <img class="tickets_deco" src="@/assets/images/TanukiStage/info/tickets_deco.svg" alt="">
+      <img class="tickets_deco" src="@/assets/images/TanukiStage/info/tickets_deco.svg" alt="tickets_deco">
     </div>
 
     <div data-aos="slide-down" data-aos-anchor-placement="#info" class="item invite">
       <div class="title_block">
-        <img src="@/assets/images/TanukiStage/title/title_invite.svg" alt="">
+        <img src="@/assets/images/TanukiStage/title/title_invite.svg" alt="title_invite">
       </div>
       <pre class="content">在每一場演出中
 我們用心演繹夢想
@@ -43,7 +43,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
     <div data-aos="slide-up" data-aos-mirror="false" class="item member">
       <RouterLink to="">
         <div class="title_block">
-          <img src="@/assets/images/TanukiStage/title/title_member.svg" alt="">
+          <img src="@/assets/images/TanukiStage/title/title_member.svg" alt="title_member">
         </div>
         <p class="content">愛看戲的親子大小有福囉！
           加入狸之友除了可享最低優惠，還有不定時的專屬會員活動！</p>
@@ -53,7 +53,7 @@ import PortalButton from '@/components/global/PortalButton.vue';
     <div data-aos="slide-left" data-aos-mirror="false" class="item join_us">
       <RouterLink to="">
         <div class="title_block">
-          <img src="@/assets/images/TanukiStage/title/title_join_us.svg" alt="">
+          <img src="@/assets/images/TanukiStage/title/title_join_us.svg" alt="title_join_us">
         </div>
         <p class="content">秉持對藝術的熱情，無論您是戲劇系畢業，或對劇場有莫大的熱忱，期待你加入狸大家庭！</p>
       </RouterLink>

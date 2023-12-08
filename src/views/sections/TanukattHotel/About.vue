@@ -6,7 +6,7 @@ import Title from '@/components/TanukattHotel/Title.vue';
   <div class="about_container" id="about">
     <Title :title="'關於狸悅 ABOUT'" :color="'black'" />
     <div class="about_wrap">
-      <img class="about_img" src="@/assets/images/TanukattHotel/about/about.svg" alt="">
+      <img class="about_img" src="@/assets/images/TanukattHotel/about/about.svg" alt="about">
       <div class="content_wrap">
         <p>&emsp;&emsp;歡迎蒞臨「狸悅酒店」，這裡不僅提供旅途中的安心落腳之處，更是一場彷彿置身夢境的奢華體驗。我們以獨特的設計、卓越的服務和細緻的呵護，為每位賓客打造一場極致的住宿之旅。 </p>
         <p>

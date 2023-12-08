@@ -9,10 +9,10 @@ import PortalButton from '@/components/global/PortalButton.vue';
       <PortalButton content="立即訂票" type="tanuki_stage_order" routingLink="#" />
     </div>
 
-    <img data-aos="flip-left" data-aos-mirror="false" data-aos-anchor-placement="#hero" class="slogan_1" src="@/assets/images/TanukiStage/hero/slogan_1.svg" alt="">
+    <img data-aos="flip-left" data-aos-mirror="false" data-aos-anchor-placement="#hero" class="slogan_1" src="@/assets/images/TanukiStage/hero/slogan_1.svg" alt="slogan_1">
     <img data-aos="zoom-in-right" data-aos-anchor-placement="#hero"  class="slogan_2"
-      src="@/assets/images/TanukiStage/hero/slogan_2.svg" alt="">
-    <img class="hero" src="@/assets/images/TanukiStage/hero/hero_img.png" alt="">
+      src="@/assets/images/TanukiStage/hero/slogan_2.svg" alt="slogan_2">
+    <img class="hero" src="@/assets/images/TanukiStage/hero/hero_img.png" alt="hero_img">
   </div>
 </template>
 

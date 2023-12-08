@@ -28,7 +28,7 @@ const dramaList = [
 <template>
   <div class="drama_container" id="drama">
     <div class="title_block">
-      <img src="@/assets/images/TanukiStage/title/title_drama.svg" alt="">
+      <img src="@/assets/images/TanukiStage/title/title_drama.svg" alt="title_drama">
     </div>
     <p class="slogan">Discover our shows, book your tickets</p>
     <div class="drama_wrap">
@@ -37,12 +37,12 @@ const dramaList = [
         <div class="btn_block">
           <PortalButton content="了解更多" type="tanuki_stage_learn_more" routingLink="#" />
         </div>
-        <img :src="getImageUrl(drama.imgSrc as string)" alt="">
+        <img :src="getImageUrl(drama.imgSrc as string)" :alt="drama.title">
       </div>
     </div>
 
     <img class="deco up" src="@/assets/images/TanukiStage/deco.svg" alt="deco">
-    <img class="deco bottom" src="@/assets/images/TanukiStage/deco.svg" alt="">
+    <img class="deco bottom" src="@/assets/images/TanukiStage/deco.svg" alt="deco">
   </div>
 </template>
 

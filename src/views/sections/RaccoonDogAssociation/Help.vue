@@ -41,7 +41,7 @@ const donateList = [
     <div class="donate_wrap">
       <div class="donateMethod" v-for="donateMethod in  donateList " :key="donateMethod.title">
         <a :href="donateMethod.url">
-          <img :src="getImageUrl(donateMethod.imgSrc as string)" alt="">
+          <img :src="getImageUrl(donateMethod.imgSrc as string)" :alt="donateMethod.title">
           <h3 class="">{{ donateMethod.title }}</h3>
         </a>
       </div>

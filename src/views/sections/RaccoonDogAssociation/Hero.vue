@@ -20,7 +20,7 @@ const heroList = [
     <a class="sponsor" href="https://www.buymeacoffee.com/tanuki.jr"></a>
     <Carousel :autoplay="3000" :wrap-around="true">
       <Slide v-for="slide in heroList" :key="slide">
-        <div class="carousel__item"><img :src="getImageUrl(slide)" alt=""></div>
+        <div class="carousel__item"><img :src="getImageUrl(slide)" alt="tanukis"></div>
       </Slide>
       <template #addons>
         <Navigation />
